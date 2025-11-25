@@ -12,8 +12,7 @@ Before you begin, ensure you have the following installed:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/strategy-coach/www.praxis.netspective.com.git
-cd praxis.netspective.com
+git clone https://github.com/strategy-coach/www.praxis.netspective.com.git www.praxis.netspective.com
 ```
 
 2. Install dependencies:
