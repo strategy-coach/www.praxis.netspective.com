@@ -1,0 +1,22 @@
+name: CI/CD Workflow
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          clean: true
+
+      - name: Deploy to production server
+        run: |
+          ssh -p22 -o StrictHostKeyChecking=no -t ${{ secrets.PRODUCTION_DEPLOYMENT_USER }}@${{ secrets.PRODUCTION_DEPLOYMENT_SERVER_IP }} "bash -i www-praxis-netspective-com.sh"
