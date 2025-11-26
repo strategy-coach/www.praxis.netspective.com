@@ -4,19 +4,19 @@
   "root": true,
   "pages": [
     "---Getting Started",
+    "index",
     "introduction",
-    "core-principles",
     "old-vs-new-world",
+    "core-principles",
     "---Architecture",
     "architecting-for-ai",
     "fact-patterns-and-modules",
-    "embedding-ai-context-in-webpages",
-    "---Implementation",
     "accuracy-and-guardrails",
-    "writing-for-ai-checklist",
     "implementation-notes",
-    "---Examples",
-    "case-studies"
+     "case-studies",
+    "---Implementation",
+    "writing-for-ai-checklist",    
+   "embedding-ai-context-in-webpages"
   ]
 }
 
