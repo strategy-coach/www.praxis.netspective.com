@@ -1,0 +1,23 @@
+{
+  "title": "Everyone is an IC Manifesto",
+  "pages": [
+    "README",
+    "---Architects",
+    "architect-shift-left-ai",
+    "architect-shift-left-legacy",
+    "architect-shift-left-checklist",
+    "---Developers",
+    "developers-shift-left-ai",
+    "developers-shift-left-legacy",
+    "developers-shift-left-checklist",
+    "---PM & QA",
+    "pm-qa-shift-left-ai",
+    "pm-qa-shift-left-legacy",
+    "pm-qa-shift-left-checklist",
+    "---Project Delivery Leaders",
+    "project-delivery-leaders-shift-left-ai",
+    "project-delivery-leaders-shift-left-legacy",
+    "project-delivery-leaders-shift-left-checklist"
+  ]
+}
+

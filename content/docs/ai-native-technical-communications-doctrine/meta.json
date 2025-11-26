@@ -1,0 +1,22 @@
+{
+  "title": "AI-Native Technical Communications",
+  "description": "Writing documentation for AI consumption",
+  "root": true,
+  "pages": [
+    "---Getting Started",
+    "introduction",
+    "core-principles",
+    "old-vs-new-world",
+    "---Architecture",
+    "architecting-for-ai",
+    "fact-patterns-and-modules",
+    "embedding-ai-context-in-webpages",
+    "---Implementation",
+    "accuracy-and-guardrails",
+    "writing-for-ai-checklist",
+    "implementation-notes",
+    "---Examples",
+    "case-studies"
+  ]
+}
+

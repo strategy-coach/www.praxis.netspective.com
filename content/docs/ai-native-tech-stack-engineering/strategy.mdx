@@ -1,9 +1,7 @@
 ---
-title: Technology Strategy Summary
+title: Summary of Technology Strategy
 description: CTO-friendly technology strategy contrasting the old way versus the AI-first new way.
 ---
-
-# Summary of Technology Strategy
 
 > CTO-friendly technology strategy summary that contrasts the “old way” versus the AI‑first “new way.” 
 
@@ -11,7 +9,7 @@ description: CTO-friendly technology strategy contrasting the old way versus the
 
 ---
 
-# Old way: stack sprawl driven by human-maintainability abstractions
+## Old way: stack sprawl driven by human-maintainability abstractions
 
 ```
 [Channel]             [Edge/Client]                  [Front‑end App]                          [API/Middleware]                          [Services]                              [Data]
@@ -41,7 +39,7 @@ What this shows
 
 ---
 
-# New way: AI‑first, HTML‑native, thin server, direct data
+## New way: AI‑first, HTML‑native, thin server, direct data
 
 ```
 [Channel]                     [Edge/Client]                          [Front‑end View]                                [Server Endpoints]                         [Data]
@@ -78,7 +76,7 @@ What this keeps (only where justified)
 
 ---
 
-# Mermaid version (drop into docs)
+## Mermaid version (drop into docs)
 
 Old way
 
@@ -168,7 +166,7 @@ flowchart LR
 
 ---
 
-# Narrative to accompany the diagram
+## Narrative to accompany the diagram
 
 * Old way: every layer exists to make human work “maintainable.” Over time, the layers accrete: client state to tame async, API gateways to shape contracts, ORMs to hide SQL, builders to juggle tooling, SDKs to standardize cross‑cutting. Each layer adds its own lifecycle, configuration, and failure modes. Complexity increases linearly per feature and exponentially with integration points, creating chronic tech debt.
 
@@ -176,7 +174,7 @@ flowchart LR
 
 ---
 
-# Optional callouts for a slide
+## Optional callouts for a slide
 
 * Complexity driver: “layers for humans” → ceremony exceeds domain logic
 * AI-first antidote: “intent over infrastructure” → attributes + thin handlers + direct SQL

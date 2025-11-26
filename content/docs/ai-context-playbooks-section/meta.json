@@ -1,0 +1,11 @@
+{
+  "title": "AI Context Playbooks",
+  "description": "Practical guides for AI collaboration",
+  "root": true,
+  "pages": [
+    "ai-as-colleague-not-tool",
+    "chatgpt5-skills",
+    "everyone-is-an-ic-manifesto"
+  ]
+}
+

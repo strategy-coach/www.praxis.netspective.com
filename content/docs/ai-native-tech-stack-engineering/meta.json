@@ -1,0 +1,11 @@
+{
+  "title": "AI-Native Tech Stack Engineering",
+  "description": "Modern tech stacks for AI-native applications",
+  "root": true,
+  "pages": [
+    "strategy",
+    "ai-accelerated-tech-debt",
+    "ai-native-enterprise-software-ideation"
+  ]
+}
+

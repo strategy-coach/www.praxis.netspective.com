@@ -22,7 +22,7 @@ export default function HomePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <Link
-              href="/docs/overview"
+              href="/docs/the-praxis"
               className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2"
             >
               Get Started
@@ -46,7 +46,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 gap-6 mb-16">
             {/* AI Interactions Engineering Manifesto */}
-            <Link href="/docs/trustable-ai-interactions-engineering" className="group p-6 rounded-xl border-2 border-purple-200 dark:border-purple-900 bg-gradient-to-br from-purple-50 to-white dark:from-purple-950/30 dark:to-slate-900 hover:shadow-2xl hover:shadow-purple-500/20 transition-all hover:scale-105">
+            <Link href="/docs/ai-interactions-engineering-manifesto/trustable-ai-interactions-engineering-manifesto" className="group p-6 rounded-xl border-2 border-purple-200 dark:border-purple-900 bg-gradient-to-br from-purple-50 to-white dark:from-purple-950/30 dark:to-slate-900 hover:shadow-2xl hover:shadow-purple-500/20 transition-all hover:scale-105">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center flex-shrink-0 shadow-lg">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,7 +65,7 @@ export default function HomePage() {
             </Link>
 
             {/* AI Native Technical Communications */}
-            <Link href="/docs/ai-native-technical-communications-doctrine" className="group p-6 rounded-xl border-2 border-blue-200 dark:border-blue-900 bg-gradient-to-br from-blue-50 to-white dark:from-blue-950/30 dark:to-slate-900 hover:shadow-2xl hover:shadow-blue-500/20 transition-all hover:scale-105">
+            <Link href="/docs/ai-native-technical-communications-doctrine/introduction" className="group p-6 rounded-xl border-2 border-blue-200 dark:border-blue-900 bg-gradient-to-br from-blue-50 to-white dark:from-blue-950/30 dark:to-slate-900 hover:shadow-2xl hover:shadow-blue-500/20 transition-all hover:scale-105">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0 shadow-lg">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -84,7 +84,7 @@ export default function HomePage() {
             </Link>
 
             {/* AI Native Software Engineering */}
-            <Link href="/docs/ai-native-tech-stack-engineering" className="group p-6 rounded-xl border-2 border-cyan-200 dark:border-cyan-900 bg-gradient-to-br from-cyan-50 to-white dark:from-cyan-950/30 dark:to-slate-900 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all hover:scale-105">
+            <Link href="/docs/ai-native-tech-stack-engineering/strategy" className="group p-6 rounded-xl border-2 border-cyan-200 dark:border-cyan-900 bg-gradient-to-br from-cyan-50 to-white dark:from-cyan-950/30 dark:to-slate-900 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all hover:scale-105">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center flex-shrink-0 shadow-lg">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -103,7 +103,7 @@ export default function HomePage() {
             </Link>
 
             {/* AI Context Playbooks */}
-            <Link href="/docs/ai-context-playbooks-section" className="group p-6 rounded-xl border-2 border-emerald-200 dark:border-emerald-900 bg-gradient-to-br from-emerald-50 to-white dark:from-emerald-950/30 dark:to-slate-900 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all hover:scale-105">
+            <Link href="/docs/ai-context-playbooks-section/ai-as-colleague-not-tool" className="group p-6 rounded-xl border-2 border-emerald-200 dark:border-emerald-900 bg-gradient-to-br from-emerald-50 to-white dark:from-emerald-950/30 dark:to-slate-900 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all hover:scale-105">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center flex-shrink-0 shadow-lg">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -163,7 +163,7 @@ export default function HomePage() {
             The Praxis helps our team transition from the "old world" to the "new world," offering guidance on how to evolve our roles, skills, and perspectives in a world transformed by artificial intelligence
           </p>
           <Link
-            href="/docs/overview"
+            href="/docs/the-praxis"
             className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 text-white rounded-full font-semibold hover:from-purple-700 hover:via-pink-700 hover:to-orange-700 transition-all shadow-lg hover:shadow-2xl hover:scale-105"
           >
             Explore The Praxis

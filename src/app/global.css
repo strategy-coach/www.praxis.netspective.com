@@ -2,106 +2,11 @@
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
 
-/* Increase content width */
 :root {
-  --fd-container-width: 1400px; /* Default is 1280px */
-}
+  /* Use Geist fonts */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 
-/* Increase text size in documentation */
-.prose {
-  font-size: 1.125rem; /* 18px instead of default 16px */
-  line-height: 1.75;
-}
-
-.prose p {
-  font-size: 1.125rem;
-  line-height: 1.75;
-}
-
-.prose h1 {
-  font-size: 2.5rem; /* Larger headings */
-}
-
-.prose h2 {
-  font-size: 2rem;
-}
-
-.prose h3 {
-  font-size: 1.5rem;
-}
-
-.prose h4 {
-  font-size: 1.25rem;
-}
-
-/* Reduce sidebar spacing */
-[data-sidebar] {
-  --fd-sidebar-width: 260px; /* Reduce sidebar width if needed */
-  padding-left: 0 !important;
-  padding-right: 0.5rem !important;
-}
-
-/* Remove extra padding from sidebar container */
-[data-sidebar] > div {
-  padding-left: 0 !important;
-}
-
-/* Reduce spacing between sidebar items */
-[data-sidebar] nav a,
-[data-sidebar] nav button {
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
-  padding-left: 0.75rem;
-  padding-right: 0.5rem;
-  font-size: 1rem; /* Increase font size from default */
-}
-
-/* Increase font size for sidebar text */
-[data-sidebar] {
-  font-size: 1rem;
-}
-
-/* Reduce spacing in sidebar sections */
-[data-sidebar] [data-folder] {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Remove padding from sidebar nav */
-[data-sidebar] nav {
-  padding-left: 0 !important;
-}
-
-/* Adjust nested items */
-[data-sidebar] ul {
-  padding-left: 0 !important;
-}
-
-[data-sidebar] li {
-  padding-left: 0 !important;
-}
-
-/* Reduce TOC (right sidebar) spacing */
-[data-toc] {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-/* Reduce spacing in TOC items */
-[data-toc] a {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-/* Reduce overall layout padding */
-.fd-layout {
-  gap: 1rem; /* Reduce gap between sidebars and content */
-}
-
-/* Reduce content area padding */
-main.container {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  /* Primary color for TOC indicator - amber like Fumadocs */
+  --color-fd-primary: #d97706;
 }

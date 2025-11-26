@@ -9,7 +9,16 @@ export default function Layout({ children }: LayoutProps<'/docs'>) {
       {...baseOptions()}
       sidebar={{
         collapsible: true,
-        defaultOpenLevel: 0,
+        defaultOpenLevel: 2,
+        // Use transform to add descriptions from meta.json
+        tabs: {
+          transform(option, node) {
+            return {
+              ...option,
+              description: node.description ?? option.description,
+            };
+          },
+        },
       }}
     >
       {children}
