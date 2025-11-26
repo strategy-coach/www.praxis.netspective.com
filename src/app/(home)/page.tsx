@@ -124,30 +124,30 @@ export default function HomePage() {
 
           {/* What You'll Find */}
           <div className="grid md:grid-cols-4 gap-6">
-            <div className="p-6 rounded-xl border border-fd-border bg-fd-card/50">
+            <Link href="/docs/ai-interactions-engineering-manifesto/trustable-ai-interactions-engineering-manifesto" className="p-6 rounded-xl border border-fd-border bg-fd-card/50 hover:border-purple-500 hover:shadow-lg transition-all hover:scale-105">
               <h3 className="text-lg font-semibold mb-2">📜 Manifestos</h3>
               <p className="text-sm text-fd-muted-foreground">
                 Core beliefs and mission that drive us in the age of AI
               </p>
-            </div>
-            <div className="p-6 rounded-xl border border-fd-border bg-fd-card/50">
+            </Link>
+            <Link href="/docs/ai-native-technical-communications-doctrine" className="p-6 rounded-xl border border-fd-border bg-fd-card/50 hover:border-blue-500 hover:shadow-lg transition-all hover:scale-105">
               <h3 className="text-lg font-semibold mb-2">📚 Doctrines</h3>
               <p className="text-sm text-fd-muted-foreground">
                 High-level philosophies for human-AI collaboration
               </p>
-            </div>
-            <div className="p-6 rounded-xl border border-fd-border bg-fd-card/50">
+            </Link>
+            <Link href="docs/ai-native-tech-stack-engineering/strategy" className="p-6 rounded-xl border border-fd-border bg-fd-card/50 hover:border-cyan-500 hover:shadow-lg transition-all hover:scale-105">
               <h3 className="text-lg font-semibold mb-2">✅ Guiding Principles</h3>
               <p className="text-sm text-fd-muted-foreground">
                 Actionable guidelines for decision-making with AI
               </p>
-            </div>
-            <div className="p-6 rounded-xl border border-fd-border bg-fd-card/50">
+            </Link>
+            <Link href="docs/ai-context-playbooks-section/ai-as-colleague-not-tool" className="p-6 rounded-xl border border-fd-border bg-fd-card/50 hover:border-emerald-500 hover:shadow-lg transition-all hover:scale-105">
               <h3 className="text-lg font-semibold mb-2">⚙️ Operating Guidelines</h3>
               <p className="text-sm text-fd-muted-foreground">
                 Practical advice for day-to-day human-AI workflows
               </p>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
