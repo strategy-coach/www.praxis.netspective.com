@@ -29,7 +29,7 @@ export interface Feedback {
 }
 
 export interface ActionResponse {
-  githubUrl: string;
+  githubUrl?: string;
 }
 
 interface Result extends Feedback {
