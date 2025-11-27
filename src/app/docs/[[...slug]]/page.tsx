@@ -9,6 +9,8 @@ import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/mdx-components';
 import type { Metadata } from 'next';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
+import { Feedback } from '@/components/feedback';
+import { saveFeedback } from '@/lib/feedback';
 
 export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
   const params = await props.params;
@@ -34,6 +36,27 @@ export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
           })}
         />
       </DocsBody>
+      {/* Add feedback at the bottom */}
+  <Feedback
+        onRateAction={async (url, feedback) => {
+          'use server';
+          
+          try {
+            saveFeedback(url, feedback);
+            console.log('Feedback saved:', { url, feedback });
+            
+            return {
+              // Optional: return success message
+              message: 'Thank you for your feedback!'
+            };
+          } catch (error) {
+            console.error('Error saving feedback:', error);
+            return {
+              error: 'Failed to save feedback'
+            };
+          }
+        }}
+      />
     </DocsPage>
   );
 }
