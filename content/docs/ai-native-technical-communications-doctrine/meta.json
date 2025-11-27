@@ -1,6 +1,7 @@
 {
   "title": "AI-Native Technical Communications",
   "description": "Writing documentation for AI consumption",
+  "icon": "BookOpen",
   "root": true,
   "pages": [
     "---Getting Started",

@@ -1,5 +1,6 @@
 {
   "title": "AI-Accelerated Tech Debt",
+  "icon": "Bug",
   "pages": [
     "why-tech-debt-grows-faster-with-ai",
     "qualityfolio-as-tech-debt-manager"

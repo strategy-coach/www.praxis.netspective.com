@@ -1,6 +1,7 @@
 ---
 title: Markdown and HTML as Trust Layers in Document AI
 description: Understanding why Markdown and HTML are the canonical trust layers for LLM-powered applications
+icon: FileCode
 ---
 
 Adopting Markdown as the primary format isn’t just a technical convenience – it’s a key part of our trust and explainability strategy. We treat the Markdown knowledge base as a “source of truth” layer that both humans and AI can read. If a source document is not in a readable, structured state, we do not ingest it for AI processing. Proceeding with messy or unstructured data (like a raw OCR dump or a poorly scanned PDF) would undermine the entire system’s reliability. Thus, any content that isn’t up to standard must be flagged and either reconverted or entirely redesigned (for example, asking the content owner to provide a better format or summary). This discipline might feel slow at times, but it is essential. Our AI agent will later be expected to provide verifiable answers with citations, and that only works if the input data is trustworthy and well-organized.

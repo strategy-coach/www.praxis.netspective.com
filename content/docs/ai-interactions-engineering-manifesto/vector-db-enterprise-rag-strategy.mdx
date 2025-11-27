@@ -1,6 +1,7 @@
 ---
 title: Vector Database and Enterprise RAG Strategy
 description: Implementing vector databases and Retrieval-Augmented Generation for enterprise AI systems
+icon: Database
 ---
 
 If (and only if) the prompt-first approach above is insufficient, we move to incorporate a Vector Database or other Retrieval-Augmented Generation (RAG) components – but this is treated as an *optional, last-resort step*, not a default. Many teams mistakenly start with a vector DB and embeddings, but our strategy is to avoid that unless scaling or relevance issues demand it. We want to prevent over-engineering. In cases where the knowledge base is very large or questions are very broad (so that providing all relevant text in the prompt isn't feasible), a vector similarity search can be introduced to fetch the most relevant chunks. For detailed implementation patterns and advanced techniques, see our [Advanced RAG Techniques](advanced-rag-techniques) guide. Excellent open-source choices include Qdrant, Weaviate, LanceDB, or Milvus, among others. These can index our Markdown or HTML chunks (transformed into embedding vectors) and retrieve by semantic similarity. The key rule: use such a vector index only when it demonstrably improves the solution – for example, if UAT tests show the assistant failing because it didn’t have the info, and adding a retrieval step fixes it.

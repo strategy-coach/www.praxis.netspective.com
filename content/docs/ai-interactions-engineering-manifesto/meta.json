@@ -1,6 +1,7 @@
 {
   "title": "Trustable AI Interactions Engineering",
   "description": "Building trust in AI-powered B2B systems",
+  "icon": "ShieldCheck",
   "root": true,
   "pages": [
     "---Foundations",

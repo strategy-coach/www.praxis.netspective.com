@@ -1,6 +1,7 @@
 {
   "title": "AI-Native Tech Stack Engineering",
   "description": "Modern tech stacks for AI-native applications",
+  "icon": "Layers",
   "root": true,
   "pages": [
     "strategy",

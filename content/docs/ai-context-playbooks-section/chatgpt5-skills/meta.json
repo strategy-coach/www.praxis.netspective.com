@@ -1,5 +1,6 @@
 {
   "title": "ChatGPT-5 Skills",
+  "icon": "Sparkles",
   "pages": [
     "README",
     "chatgpt5-vs-4",

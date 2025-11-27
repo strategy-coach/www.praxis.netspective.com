@@ -1,5 +1,6 @@
 {
   "title": "AI-Native Enterprise Software Ideation",
+  "icon": "Lightbulb",
   "pages": [
     "ai-native-enterprise-software-customization-ideation",
     "ai-native-enterprise-software-diagrams.prompt"
