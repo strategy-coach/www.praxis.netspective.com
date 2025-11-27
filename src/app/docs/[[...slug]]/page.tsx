@@ -36,22 +36,25 @@ export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
           })}
         />
       </DocsBody>
-      {/* Add feedback at the bottom */}
+  {/* Add feedback at the bottom */}
   <Feedback
-        onRateAction={async (url, feedback) => {
-          'use server';
-          
-          try {
-            saveFeedback(url, feedback);
-            console.log('Feedback saved:', { url, feedback });
-            
-            return {};
-          } catch (error) {
-            console.error('Error saving feedback:', error);
-            return {};
-          }
-        }}
-      />
+    onRateAction={async (url, feedback) => {
+      'use server';
+      
+      try {
+        saveFeedback(url, {
+          opinion: feedback.opinion === 'good' ? 'yes' : 'no',
+          message: feedback.message,
+        });
+        console.log('Feedback saved:', { url, feedback });
+        
+        return {};
+      } catch (error) {
+        console.error('Error saving feedback:', error);
+        return {};
+      }
+    }}
+  />
     </DocsPage>
   );
 }
