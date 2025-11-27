@@ -45,10 +45,7 @@ export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
             saveFeedback(url, feedback);
             console.log('Feedback saved:', { url, feedback });
             
-            return {
-              // Optional: return success message
-              message: 'Thank you for your feedback!'
-            };
+            return {};
           } catch (error) {
             console.error('Error saving feedback:', error);
             return {
