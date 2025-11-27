@@ -48,9 +48,7 @@ export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
             return {};
           } catch (error) {
             console.error('Error saving feedback:', error);
-            return {
-              error: 'Failed to save feedback'
-            };
+            return {};
           }
         }}
       />
