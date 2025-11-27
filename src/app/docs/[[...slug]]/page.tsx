@@ -43,7 +43,7 @@ export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
       
       try {
         saveFeedback(url, {
-          opinion: feedback.opinion === 'good' ? 'yes' : 'no',
+          opinion: feedback.opinion,
           message: feedback.message,
         });
         console.log('Feedback saved:', { url, feedback });

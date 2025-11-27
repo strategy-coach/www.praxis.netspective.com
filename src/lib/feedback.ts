@@ -1,7 +1,7 @@
 import db from './db';
 
 export interface FeedbackData {
-   opinion: 'yes' | 'no';
+   opinion: 'good' | 'bad';
    message?: string;
 }
 
