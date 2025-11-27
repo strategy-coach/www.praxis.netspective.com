@@ -25,6 +25,7 @@ export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
       full={page.data.full}
       tableOfContent={{ style: 'clerk' }}
       tableOfContentPopover={{ style: 'clerk' }}
+      lastUpdate={page.data.lastModified ? new Date(page.data.lastModified) : undefined}
     >
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
