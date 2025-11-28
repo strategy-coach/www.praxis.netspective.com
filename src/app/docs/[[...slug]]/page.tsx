@@ -11,6 +11,7 @@ import type { Metadata } from 'next';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
 import { Feedback } from '@/components/feedback';
 import { saveFeedback } from '@/lib/feedback';
+import { headers } from 'next/headers';
 
 export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
   const params = await props.params;
@@ -41,14 +42,27 @@ export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
   <Feedback
     onRateAction={async (url, feedback) => {
       'use server';
-      
+
       try {
+        const headersList = await headers();
+        const userAgent = headersList.get('user-agent') || undefined;
+        const ip = headersList.get('x-forwarded-for')?.split(',')[0]?.trim()
+          || headersList.get('x-real-ip')
+          || headersList.get('cf-connecting-ip')  // Cloudflare
+          || undefined;
+
         saveFeedback(url, {
           opinion: feedback.opinion,
           message: feedback.message,
+          sessionId: feedback.sessionId,
+          metadata: {
+            userAgent,
+            ip,
+            ...feedback.clientMetadata,
+          },
         });
         console.log('Feedback saved:', { url, feedback });
-        
+
         return {};
       } catch (error) {
         console.error('Error saving feedback:', error);

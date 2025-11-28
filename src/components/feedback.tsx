@@ -22,10 +22,20 @@ const rateButtonVariants = cva(
   },
 );
 
+export interface FeedbackClientMetadata {
+  language?: string;
+  screenSize?: string;
+  timezone?: string;
+  platform?: string;
+  referrer?: string;
+}
+
 export interface Feedback {
   opinion: 'good' | 'bad';
   url?: string;
   message: string;
+  sessionId?: string;
+  clientMetadata?: FeedbackClientMetadata;
 }
 
 export interface ActionResponse {
@@ -34,6 +44,32 @@ export interface ActionResponse {
 
 interface Result extends Feedback {
   response?: ActionResponse;
+}
+
+// Generate or retrieve a persistent session ID
+function getSessionId(): string {
+  const key = 'docs-feedback-session-id';
+  let sessionId = localStorage.getItem(key);
+  if (!sessionId) {
+    sessionId = `${Date.now()}-${Math.random().toString(36).substring(2, 15)}`;
+    localStorage.setItem(key, sessionId);
+  }
+  return sessionId;
+}
+
+// Collect client-side metadata
+function getClientMetadata(): FeedbackClientMetadata {
+  // Use userAgentData if available (modern browsers), fallback to platform
+  const platform = (navigator as Navigator & { userAgentData?: { platform?: string } })
+    .userAgentData?.platform || navigator.platform;
+
+  return {
+    language: navigator.language,
+    screenSize: `${window.screen.width}x${window.screen.height}`,
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    platform,
+    referrer: document.referrer || undefined,
+  };
 }
 
 export function Feedback({
@@ -68,6 +104,8 @@ export function Feedback({
       const feedback: Feedback = {
         opinion,
         message,
+        sessionId: getSessionId(),
+        clientMetadata: getClientMetadata(),
       };
 
       void onRateAction(url, feedback).then((response) => {
