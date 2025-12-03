@@ -32,17 +32,17 @@ Document the outcomes of these prompt experiments. For example: *“When asked a
 
 ### `surveilr` as the Context Composition layer
 
-surveilr’s SQLite-backed design gives engineering teams the ability to generate LLM context bundles the same way they query structured business data — with rigor, visibility, and control. We are not inventing a new language for context. We are simply using the most battle-tested language in computing — SQL — to do the one thing it’s always done best: get the right data, in the right shape, at the right time.
+surveilr’s SQLite-backed design gives engineering teams the ability to generate LLM context bundles the same way they query structured business data - with rigor, visibility, and control. We are not inventing a new language for context. We are simply using the most battle-tested language in computing - SQL - to do the one thing it’s always done best: get the right data, in the right shape, at the right time.
 
-With Markdown as our content layer, and `surveilr` as our _composition_ engine for prompt preparation, context engineering becomes a reproducible process — one that scales, audits, and defends itself — exactly what trustable AI demands.
+With Markdown as our content layer, and `surveilr` as our _composition_ engine for prompt preparation, context engineering becomes a reproducible process - one that scales, audits, and defends itself - exactly what trustable AI demands.
 
-In traditional LLM application development, context engineering is often treated as a loose, ad hoc activity: developers manually gather content from file systems, copy/paste from various documents, or write brittle scripts to string together chunks of text. These context bundles are typically stored as local files or hardcoded into prompts — with no real visibility, traceability, or reuse across the team.
+In traditional LLM application development, context engineering is often treated as a loose, ad hoc activity: developers manually gather content from file systems, copy/paste from various documents, or write brittle scripts to string together chunks of text. These context bundles are typically stored as local files or hardcoded into prompts - with no real visibility, traceability, or reuse across the team.
 
-But in a trust-first, B2B-grade AI system, context is not ephemeral — it’s  a first-class data asset, and it must be handled with the same rigor as source code or structured data. That’s why we introduce a fundamentally different approach:  **context engineering through SQL**, powered by the SQLite-based RSSDs in `surveilr`.
+But in a trust-first, B2B-grade AI system, context is not ephemeral - it’s  a first-class data asset, and it must be handled with the same rigor as source code or structured data. That’s why we introduce a fundamentally different approach:  **context engineering through SQL**, powered by the SQLite-based RSSDs in `surveilr`.
 
 #### SQL as the Language of Context Bundling (_Composition_)
 
-When all Markdown content — and its frontmatter metadata — is ingested into `surveilr`, each document becomes part of a  **queryable knowledge layer** . Each heading, section, paragraph, bullet, and tag is stored in tables, with everything pre-parsed and queryable.
+When all Markdown content - and its frontmatter metadata - is ingested into `surveilr`, each document becomes part of a  **queryable knowledge layer** . Each heading, section, paragraph, bullet, and tag is stored in tables, with everything pre-parsed and queryable.
 
 Instead of searching for files on disk or manually slicing text, engineers can _use standard `SQL` `SELECT` statements_ to construct context windows with high precision. For example:
 
@@ -50,18 +50,18 @@ Instead of searching for files on disk or manually slicing text, engineers can _
 * Select all security guidelines for `remote access` authored by the compliance team
 * Select all SOPs that contain specific keywords but are not marked `internal_only`
 
-No custom code. No guesswork. Just SQL — the universal, declarative language every data-aware engineer understands.
+No custom code. No guesswork. Just SQL - the universal, declarative language every data-aware engineer understands.
 
-This  shifts context creation from unstructured artifact hunting to structured knowledge retrieval using _context composition via SQL_. It allows engineers to assemble prompt inputs using simple, repeatable rules. These queries can even be versioned, audited, and tested like software components — aligning tightly with our principle that all trustable systems must be inspectable.
+This  shifts context creation from unstructured artifact hunting to structured knowledge retrieval using _context composition via SQL_. It allows engineers to assemble prompt inputs using simple, repeatable rules. These queries can even be versioned, audited, and tested like software components - aligning tightly with our principle that all trustable systems must be inspectable.
 
 While LLMs operate in natural language, context engineering operates in structured logic. By expressing our content filters and retrieval logic in SQL, we gain several advantages:
 
 * Precision: We define exactly what knowledge is relevant using clear WHERE clauses.
 * Reusability: The same context selection query can be reused across different prompts, workflows, or products.
-* Audibility: We can show exactly how a context bundle was constructed — including document IDs, chunk order, and source metadata.
+* Audibility: We can show exactly how a context bundle was constructed - including document IDs, chunk order, and source metadata.
 * Non-technical accessibility: Even non-engineers who understand the basics of querying can read, understand, or even help design prompt scaffolds using simple SQL.
 
-Compare this to the fragile, opaque method of writing file glob patterns or regexes to extract content — approaches that are difficult to debug, cannot be cited, and don’t scale across teams.
+Compare this to the fragile, opaque method of writing file glob patterns or regexes to extract content - approaches that are difficult to debug, cannot be cited, and don’t scale across teams.
 
 #### `surveilr` Makes Prompting Auditable by Default
 
@@ -71,7 +71,7 @@ Because `surveilr` uses SQLite behind the scenes, context bundles can be persist
 * Each included paragraph retains metadata like authorship and effective date
 * Any changes to those chunks after the prompt was generated can trigger alerts or invalidation workflows
 
-This means every AI prompt becomes an auditable unit — not just in terms of content, but in terms of context and prompt _construction_ and _composition_ logic. We can answer questions like:
+This means every AI prompt becomes an auditable unit - not just in terms of content, but in terms of context and prompt _construction_ and _composition_ logic. We can answer questions like:
 
 * Why was this paragraph included in the context?
 * What would happen if we reran the prompt-building SQL today?
@@ -81,7 +81,7 @@ These are not hypotheticals. These are production requirements in a world where 
 
 #### From Prompt Engineering to Prompt Governance
 
-In many AI systems, prompts are fragile art — crafted through trial-and-error and locked into code. With surveilr and SQL, prompts become governed data pipelines. They are no longer handwritten text blocks hidden inside source code. They are the output of live SQL queries over a structured Markdown corpus — meaning we can:
+In many AI systems, prompts are fragile art - crafted through trial-and-error and locked into code. With surveilr and SQL, prompts become governed data pipelines. They are no longer handwritten text blocks hidden inside source code. They are the output of live SQL queries over a structured Markdown corpus - meaning we can:
 
 * Automate their creation
 * Validate their inputs

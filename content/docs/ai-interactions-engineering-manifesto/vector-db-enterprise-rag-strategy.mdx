@@ -12,11 +12,11 @@ It’s worth exploring alternatives before diving into unstructured text RAG. Fo
 
 &#x20;*Example – Modern LLM Application Architecture: Components include user query inputs, retrieval (vector database or search) for context, prompt construction, the LLM itself, and post-processing like filtering or citing sources. In our strategy, we only introduce the vector DB component if necessary, and always within a controlled MCP framework to maintain traceability.*
 
-### `surveilr` as a Pre-RAG Grounding Layer — Not a Retrieval System
+### `surveilr` as a Pre-RAG Grounding Layer - Not a Retrieval System
 
 The `surveilr` platform is designed explicitly to _delay or prevent the need for vector databases and RAGs_ by providing a fully structured, SQL-queryable corpus of enterprise knowledge grounded in human-readable, semantically-chunked Markdown or HTML.
 
-In traditional RAG-first architectures, teams rush to build embedding pipelines and vector search layers because they lack structured, queryable access to the documents themselves. The assumption is that LLMs require similarity search to find relevant knowledge — but this is often a crutch for _poor upstream document hygiene_.
+In traditional RAG-first architectures, teams rush to build embedding pipelines and vector search layers because they lack structured, queryable access to the documents themselves. The assumption is that LLMs require similarity search to find relevant knowledge - but this is often a crutch for _poor upstream document hygiene_.
 
 `surveilr` challenges that assumption directly.
 
@@ -49,21 +49,21 @@ This eliminates the need for RAG unless the queries become unbounded or cognitiv
 
 #### 3. Context Windows Constructed by Query, Not Search
 
-Most modern LLMs have large enough context windows (e.g., 32K–200K tokens) to handle entire filtered context bundles. `surveilr` enables those bundles to be created and scoped via SQL — not embeddings.
+Most modern LLMs have large enough context windows (e.g., 32K–200K tokens) to handle entire filtered context bundles. `surveilr` enables those bundles to be created and scoped via SQL - not embeddings.
 
 The context, therefore, is not retrieved by “semantic proximity,” but filtered by explicit B2B criteria, such as document lineage, relevance tags, or regulatory role decided during the expecations engineering and UAT preparation phases.
 
-This means every answer generated can include citations that trace directly to document IDs and chunk numbers — an outcome nearly impossible to guarantee with vanilla RAG.
+This means every answer generated can include citations that trace directly to document IDs and chunk numbers - an outcome nearly impossible to guarantee with vanilla RAG.
 
 ### When (and Only When) RAG Becomes Necessary
 
-The strategy defined in our architecture — and supported by `surveilr` — is that _vector retrieval is a fallback_, invoked only if:
+The strategy defined in our architecture - and supported by `surveilr` - is that _vector retrieval is a fallback_, invoked only if:
 
 * UAT tests reveal context insufficiency
 * Prompt-only bundles exceed the token window
 * Users need to ask exploratory or edge-case questions that aren’t directly covered by structured tags or SQL-accessible metadata
 
-In such cases, `surveilr` doesn’t obstruct RAG — it *prepares it*.
+In such cases, `surveilr` doesn’t obstruct RAG - it *prepares it*.
 
 This turns RAG into a tightly controlled augmentation layer, not a fulltext search substitute.
 

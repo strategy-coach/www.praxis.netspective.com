@@ -12,13 +12,13 @@ If there’s any confusion or uncertainty in how to structure a particular docum
 
 To illustrate why this meticulousness matters: studies and industry experience show that structured, well-organized context greatly improves LLM accuracy and reduces hallucination. When an AI has “structured, temporally aware memory” or context, it can provide far more factual and coherent answers. Essentially, by giving the model a clean knowledge base, we ground its responses in reality. Moreover, when the system provides citations (e.g. “【Doc1†Section 2.3】”), users can click and see the original text, reinforcing trust. Citations act as **trust markers** for AI outputs. Users are more confident in an answer if they can verify it against a source. Our Markdown and HTML documents, with stable section identifiers, make such citation-based answers possible. In later steps, we will enforce that the AI’s answers always include these references. For now, the takeaway is: do not proceed with AI development until the documentation corpus is in top-notch shape. It’s better to delay a model integration by a week than to integrate bad data and get wrong answers. This Markdown-first, source-of-truth layer, complemented by HTML when needed, is what will make our AI system explainable and auditable from day one.
 
-In AI-native systems, Markdown is not a convenience format — it is the trust substrate. And HTML is not just another serialization choice — it is the canonical semantic layer for structural fidelity and machine alignment. Markdown is how we make human meaning machine-verifiable for simpler knowledge, and HTML is how we preserve rich semantics, structural fidelity, and auditability. Together, they ensure we can trace lineage, enforce citations, and maintain explainability.
+In AI-native systems, Markdown is not a convenience format - it is the trust substrate. And HTML is not just another serialization choice - it is the canonical semantic layer for structural fidelity and machine alignment. Markdown is how we make human meaning machine-verifiable for simpler knowledge, and HTML is how we preserve rich semantics, structural fidelity, and auditability. Together, they ensure we can trace lineage, enforce citations, and maintain explainability.
 
 Put plainly: we do not build trustworthy AI on top of PDF, Word, or Excel. We build it on top of intent-engineered, provenance-preserving Markdown and, where fidelity demands it, standards-compliant HTML with metadata.
 
 ### Markdown Is the Canonical Source of Truth (for Simplicity)
 
-In conventional IT workflows, PDFs, Word documents, and spreadsheets are treated as final assets — polished outputs for human consumption. In AI-native workflows, those same documents are raw materials. They must be restructured, enriched, and prepared for reasoning systems that cannot tolerate ambiguity or layout-dependent meaning.
+In conventional IT workflows, PDFs, Word documents, and spreadsheets are treated as final assets - polished outputs for human consumption. In AI-native workflows, those same documents are raw materials. They must be restructured, enriched, and prepared for reasoning systems that cannot tolerate ambiguity or layout-dependent meaning.
 
 Therefore:
 
@@ -42,13 +42,13 @@ In contrast, HTML with metadata tags is our canonical layer when:
 * Fidelity matters for compliance, accessibility, or auditability.
 * Ontology-level semantics, page numbers, and audit trails must be preserved.
 
-The choice isn’t hierarchical—neither is “better” overall. Markdown is simpler and faster for everyday content; HTML is the proper standard for enterprise-grade semantics, structural fidelity, and alignment with how vision–language models already reason.
+The choice isn’t hierarchical-neither is “better” overall. Markdown is simpler and faster for everyday content; HTML is the proper standard for enterprise-grade semantics, structural fidelity, and alignment with how vision–language models already reason.
 
 #### Trust and Traceability in Both Formats
 
 Whether Markdown or HTML, the principles remain the same:
 
-* Every chunk must be provenance-enriched. Both formats allow embedding metadata—frontmatter in Markdown, meta tags or attributes in HTML.
+* Every chunk must be provenance-enriched. Both formats allow embedding metadata-frontmatter in Markdown, meta tags or attributes in HTML.
 * Every answer must be citeable. We enforce that AI outputs map directly to a chunk of Markdown or HTML, complete with identifiers.
 * Every document must be auditable. Non-technical staff can read Markdown; technical staff and systems can validate HTML with DOM-aware tools.
 
@@ -85,11 +85,11 @@ In traditional workflows, developers ask: “How do we process PDFs?” or “Ho
 
 In AI-native engineering, this question is naive and misleading.
 
-We do not process "PDFs" or "Word documents." We process knowledge containers. Each PDF or DOCX is a bespoke encapsulation of business logic, policy, or operational context — and it must be treated as such.
+We do not process "PDFs" or "Word documents." We process knowledge containers. Each PDF or DOCX is a bespoke encapsulation of business logic, policy, or operational context - and it must be treated as such.
 
 * A return policy PDF from Company A and a refund workflow Word doc from Company B may both be `.pdf` or `.docx`, but they encode completely different internal logic.
 * Each is semantically unique and requires document-specific parsing, chunking, and provenance logic.
-* Therefore, we write one conversion script per complex document — not per format — using TypeScript/Deno by default, or Python when technically justified. The output may be Markdown or HTML depending on whether simplicity or semantic fidelity is required.
+* Therefore, we write one conversion script per complex document - not per format - using TypeScript/Deno by default, or Python when technically justified. The output may be Markdown or HTML depending on whether simplicity or semantic fidelity is required.
 
 This mindset is fundamental. Engineering teams must move beyond file-format-based abstraction and adopt a knowledge-first discipline. Our job is not “parsing documents.” Our job is structuring knowledge for trustable inference.
 
@@ -158,13 +158,13 @@ See YouTube video [Chunking 101: The Invisible Bottleneck Killing Enterprise AI 
 
 ### The Strategic View: Markdown and HTML as Compliance Architecture
 
-Organizations that rely on AI must not only answer correctly — they must explain why the answer is correct and where it came from. In regulated domains, this is not a feature — it is a requirement.
+Organizations that rely on AI must not only answer correctly - they must explain why the answer is correct and where it came from. In regulated domains, this is not a feature - it is a requirement.
 
 * If you cannot cite your source, your AI is not trustworthy.
 * If your source is a PDF with no internal identifiers, it cannot be cited reliably.
 * If your answer cannot be traced to a Markdown or HTML chunk with full metadata, it is not explainable.
 
-By transforming all enterprise documents into structured, provenance-enriched Markdown and HTML, we build an AI-native compliance architecture — one that supports:
+By transforming all enterprise documents into structured, provenance-enriched Markdown and HTML, we build an AI-native compliance architecture - one that supports:
 
 * AI safety
 * External auditability
@@ -183,4 +183,4 @@ Markdown, when enriched with frontmatter, chunk-level provenance, and determinis
 PDF, Word, Excel, and PowerPoint are artifacts of human formatting convenience. Markdown is the format of verifiable reasoning for simpler cases. HTML is the canonical representation for rich semantics and structural fidelity.
 
 
-Every AI-native organization must decide: are we designing systems for readability or for accountability? The answer lies not in choosing Markdown or HTML, but in knowing when to use each. Ours is Markdown for simplicity and HTML for canonical fidelity — not as a shortcut, but as a strategy.
+Every AI-native organization must decide: are we designing systems for readability or for accountability? The answer lies not in choosing Markdown or HTML, but in knowing when to use each. Ours is Markdown for simplicity and HTML for canonical fidelity - not as a shortcut, but as a strategy.

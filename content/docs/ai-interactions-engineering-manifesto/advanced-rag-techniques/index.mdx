@@ -6,7 +6,7 @@ icon: Target
 
 > **"The difference between a tool and a colleague is trust. A tool gives you an answer. A colleague shows their work."**
 
- This isn't just documentation—it's a map for a journey that transforms AI from a glorified search engine into a trusted research partner.
+ This isn't just documentation-it's a map for a journey that transforms AI from a glorified search engine into a trusted research partner.
 
 
 ## A Typical RAG Journey
@@ -15,7 +15,7 @@ Every advanced RAG system follows a predictable evolution. The diagram below map
 
 ![rag-journy-overview](/rag-journey-progression.drawio.svg)
 
-**What this diagram shows:** The typical progression from basic RAG (60% accuracy) through four distinct phases of enhancement, with each phase addressing specific failure modes and achieving measurable accuracy gains. Notice how most teams get stuck between 70-85% accuracy—this guide shows you how to break through.
+**What this diagram shows:** The typical progression from basic RAG (60% accuracy) through four distinct phases of enhancement, with each phase addressing specific failure modes and achieving measurable accuracy gains. Notice how most teams get stuck between 70-85% accuracy-this guide shows you how to break through.
 
 
 
@@ -59,7 +59,7 @@ Output: Matches A OR B
 (Logical requirements violated)
 ```
 
-**Why it fails:** Vector embeddings compress meaning into similarity scores. Context B and Context C may share semantic properties and appear in similar contexts—they look similar to an embedding model despite being factually different.
+**Why it fails:** Vector embeddings compress meaning into similarity scores. Context B and Context C may share semantic properties and appear in similar contexts-they look similar to an embedding model despite being factually different.
 
 **Solution:** Hybrid Matching Strategy OR Input Decomposition + Rewriting
 
@@ -135,17 +135,17 @@ Returns: Attributes(X), Attributes(Y)
 
 **What this diagram shows:** A detailed anatomical view of all six failure modes, illustrating the exact point where basic RAG breaks down for each pattern. Each mode is shown as a 5-step process: the query, the embedding/retrieval steps, and the critical moment of failure. This helps you diagnose which failure mode you're experiencing by matching the symptoms.
 
-The realization: **The RAG system wasn't reasoning—it was matching patterns.**
+The realization: **The RAG system wasn't reasoning-it was matching patterns.**
 
 
 
 ### Act III: The Path Forward (From 60% to 98%)
 
-Elite RAG systems aren't magic—they're **engineered with intention**. The journey from 60% to 98% accuracy has four distinct phases. The roadmap below shows you exactly where to invest your effort.
+Elite RAG systems aren't magic-they're **engineered with intention**. The journey from 60% to 98% accuracy has four distinct phases. The roadmap below shows you exactly where to invest your effort.
 
 ![four-phase-implementation-road-map](/implementation-roadmap.drawio.svg)
 
-**What this diagram shows:** A four-phase implementation roadmap with clear accuracy targets and technique categories for each phase. The visual timeline shows dependencies between phases and estimated effort levels. Most teams achieve 85% accuracy by Phase 2—Phases 3-4 are for specialized, high-stakes use cases.
+**What this diagram shows:** A four-phase implementation roadmap with clear accuracy targets and technique categories for each phase. The visual timeline shows dependencies between phases and estimated effort levels. Most teams achieve 85% accuracy by Phase 2-Phases 3-4 are for specialized, high-stakes use cases.
 
 ```
 Phase 1: Foundation     → 60-70% accuracy  (Better indexing)
@@ -679,7 +679,7 @@ Let's trace a complex query through the entire system:
 
 ![six-layer-architecture](/six-layer-architecture-detailed.drawio.svg)
 
-**What this diagram shows:** A zoomed-in view of the six core operational layers (Ingestion, Indexing, Query Analysis, Retrieval, Reasoning & Ranking, Generation) with specific tools and technologies at each layer. The diagram uses the "restaurant kitchen" metaphor—each layer is labeled with its kitchen equivalent (e.g., "The Pantry" for Indexing, "The Chef" for Reasoning). This helps implementation teams understand exactly what components to build or integrate at each layer.
+**What this diagram shows:** A zoomed-in view of the six core operational layers (Ingestion, Indexing, Query Analysis, Retrieval, Reasoning & Ranking, Generation) with specific tools and technologies at each layer. The diagram uses the "restaurant kitchen" metaphor-each layer is labeled with its kitchen equivalent (e.g., "The Pantry" for Indexing, "The Chef" for Reasoning). This helps implementation teams understand exactly what components to build or integrate at each layer.
 
 
 
@@ -691,7 +691,7 @@ Let's trace a complex query through the entire system:
 
 ![praxis-integration](/praxis-integration-map.drawio.svg)
 
-**What this diagram shows:** A mapping between existing Praxis architectural components (Markdown as Trust Layer, surveilr SQL-Native Grounding, Vector DB Strategy, MCP Integration) and the new advanced RAG techniques. The diagram shows which advanced techniques enhance which existing foundations, ensuring backward compatibility. For example, "Contextual Retrieval" builds on "Markdown as Trust Layer," while "Hybrid Search" extends the "Vector DB Strategy." Use this to understand that advanced RAG doesn't replace Praxis—it extends it.
+**What this diagram shows:** A mapping between existing Praxis architectural components (Markdown as Trust Layer, surveilr SQL-Native Grounding, Vector DB Strategy, MCP Integration) and the new advanced RAG techniques. The diagram shows which advanced techniques enhance which existing foundations, ensuring backward compatibility. For example, "Contextual Retrieval" builds on "Markdown as Trust Layer," while "Hybrid Search" extends the "Vector DB Strategy." Use this to understand that advanced RAG doesn't replace Praxis-it extends it.
 
 Advanced RAG techniques **build upon** (not replace) these Praxis foundations:
 
@@ -875,7 +875,7 @@ Human-Centric → "AI as Colleague" reliability
 
 ![rag-metrics](/ragas-metrics-explained.drawio.svg)
 
-**What this diagram shows:** The four core RAGAS metrics (Faithfulness, Answer Relevance, Context Precision, Context Recall) with visual representations of how each is calculated. The diagram includes examples of high vs. low scores for each metric, formulas, and target thresholds. This is your measurement dashboard—use it to establish baselines and track improvements after each phase implementation.
+**What this diagram shows:** The four core RAGAS metrics (Faithfulness, Answer Relevance, Context Precision, Context Recall) with visual representations of how each is calculated. The diagram includes examples of high vs. low scores for each metric, formulas, and target thresholds. This is your measurement dashboard-use it to establish baselines and track improvements after each phase implementation.
 
 ### Why Measurement Matters
 

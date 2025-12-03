@@ -6,9 +6,9 @@ icon: Database
 
 Trust in AI systems does not come from clever prompting alone. While large language models (LLMs) can generate compelling prose and plausible answers, their reliability often erodes when they interact with structured enterprise data. Hallucinations, schema mismatches, and ambiguous interpretations remain common failure modes.
 
-A more durable path to trustworthy AI is to wrap natural language interactions in a Text-to-SQL translation layer—one that is schema-aware, provenance-rich, and grounded in custom-trained models. This approach turns AI from a speculative answer engine into a verifiable interface, where every output can be traced to a deterministic query against an authoritative data source.
+A more durable path to trustworthy AI is to wrap natural language interactions in a Text-to-SQL translation layer-one that is schema-aware, provenance-rich, and grounded in custom-trained models. This approach turns AI from a speculative answer engine into a verifiable interface, where every output can be traced to a deterministic query against an authoritative data source.
 
-LLMs perform more accurately when they truly understand the database schema—its tables, fields, relationships, and constraints. By directly embedding schema metadata into prompts or leveraging retrieval of schema documentation, the LLM gains critical context to generate precise, semantically valid SQL. This schema grounding mitigates hallucination and enhances every step of reliability—from query correctness to downstream data integrity.
+LLMs perform more accurately when they truly understand the database schema-its tables, fields, relationships, and constraints. By directly embedding schema metadata into prompts or leveraging retrieval of schema documentation, the LLM gains critical context to generate precise, semantically valid SQL. This schema grounding mitigates hallucination and enhances every step of reliability-from query correctness to downstream data integrity.
 
 > Don’t just lean on generic structured prompting. Instead, wrap carefully designed prompts into a text‑to‑SQL layer, anchoring in schema and using robust frameworks to produce trustworthy outputs.
 
@@ -60,11 +60,11 @@ A trustworthy Text-to-SQL architecture is more than “ask the LLM for SQL.” I
   
 ### Auditability and Compliance
 
-SQL queries can be logged, versioned, and audited. When used in regulated environments—healthcare, finance, defense—this is critical. You can trace every AI-driven answer back to the exact query and dataset used, satisfying governance and compliance requirements.
+SQL queries can be logged, versioned, and audited. When used in regulated environments-healthcare, finance, defense-this is critical. You can trace every AI-driven answer back to the exact query and dataset used, satisfying governance and compliance requirements.
 
 Prompting LLMs directly against raw enterprise data is an invitation to inconsistency. Wrapping those prompts in a schema-aware, custom-trained Text-to-SQL layer turns unstructured requests into deterministic, auditable queries. This approach aligns perfectly with the principles of trustworthy AI: verifiable outputs, provenance tracking, and governance-ready architecture.
 
-For AI-native engineering teams, Text-to-SQL is not just a convenience feature—it’s a structural requirement for building systems that users can trust with their most critical data.
+For AI-native engineering teams, Text-to-SQL is not just a convenience feature-it’s a structural requirement for building systems that users can trust with their most critical data.
 
 ## Open-Source and Commercial Foundations
 
@@ -72,18 +72,18 @@ Organizations seeking control and transparency should begin with open-source fra
 
 * PremSQL: A fully local, open-source Text-to-SQL library optimized for security and customization. Ideal for environments where data privacy is paramount.
 * Vanna (MIT-licensed): A Python RAG framework enabling SQL generation from natural language. Helps ground prompts via retrieval, often including schema docs.
-* Quepy: A customizable framework for mapping natural language to database queries—even if older, notable for rule-based precision tuning.
+* Quepy: A customizable framework for mapping natural language to database queries-even if older, notable for rule-based precision tuning.
 * CodeS (open-source LLM): A specialized family of language models (1B–15B parameters) pre-trained for Text-to-SQL using SQL-centric corpora and schema-aware techniques. Excellent for fine‑tuned, private performance.
 * BASE-SQL: A novel pipeline leveraging schema linking, candidate generation, revision, and merging. Uses fine-tuning of the open-source Qwen2.5‑Coder‑32B‑Instruct LLM. Achieves impressive benchmark accuracy with efficiency and transparency.
 * UniSAr: Enhances autoregressive LLMs by making them aware of structure: encoding schema context, enforcing constrained decoding, and intelligently completing JOINs. Non‐invasive but powerful schema grounding.
 
 Commercial options offer governance, UI, and enterprise-scale integration:
 
-* AWS + Bedrock + Claude 3.5 Sonnet: A managed pipeline using RAG—schema-aware embeddings via Amazon Titan, and LLM generation of SQL, tightly integrated with robust enterprise tooling.
-* Shakudo’s Enterprise Text-to-SQL: Offers LLM-based SQL with semantic consistency, custom fine-tuning, query-level security, and transparent translations—ideal for regulated environments.
+* AWS + Bedrock + Claude 3.5 Sonnet: A managed pipeline using RAG-schema-aware embeddings via Amazon Titan, and LLM generation of SQL, tightly integrated with robust enterprise tooling.
+* Shakudo’s Enterprise Text-to-SQL: Offers LLM-based SQL with semantic consistency, custom fine-tuning, query-level security, and transparent translations-ideal for regulated environments.
 * SelectStar’s Landscape Overview: Highlights modern tools that are cross-platform and metadata/schema-aware, integrating data catalog and orchestration layers for governed, safe Text-to-SQL experiences.
 
-Hybrid strategies—open-source core with commercial wrappers—often provide the best mix of control and productivity.
+Hybrid strategies-open-source core with commercial wrappers-often provide the best mix of control and productivity.
 
 ## Engineering Pattern for Schema-Aware Text-to-SQL
 
@@ -95,7 +95,7 @@ A trustworthy Text-to-SQL architecture is more than “ask the LLM for SQL.” I
 4. Execution with Safeguards – Enforce role-based access control and query safety filters.
 5. Response with Provenance – Store all steps in Markdown with frontmatter for full auditability.
 
-Here’s the **new whitepaper section** you can insert after the RAG pattern — it frames **best practices for general-purpose LLMs in Text-to-SQL** and explains why **fine-tuning on your schema + historical queries** is the ultimate path to trust in multi-tenant, fine-grained authorization contexts.
+Here’s the **new whitepaper section** you can insert after the RAG pattern - it frames **best practices for general-purpose LLMs in Text-to-SQL** and explains why **fine-tuning on your schema + historical queries** is the ultimate path to trust in multi-tenant, fine-grained authorization contexts.
 
 ### Start with a Controlled General-Purpose LLM Setup
 
@@ -133,7 +133,7 @@ These limitations mean that while general-purpose LLMs can *simulate* trustworth
 
 To achieve true trust alignment, you must train a custom Text-to-SQL model on your own schema + historical queries + authorization rules. Benefits:
 
-* **Schema Alignment**. The model learns the exact structure, relationships, and naming conventions of your database — no more ambiguity between similar-sounding fields.
+* **Schema Alignment**. The model learns the exact structure, relationships, and naming conventions of your database - no more ambiguity between similar-sounding fields.
 
 * **Authorization Preservation**. Multi-tenancy and fine-grained permissions become part of the model’s learned behavior. For example:
   * The model never generates a cross-tenant join unless a special administrative role is present.
@@ -141,7 +141,7 @@ To achieve true trust alignment, you must train a custom Text-to-SQL model on yo
 
 * **Performance Optimization**. The model adopts your preferred query patterns, indexing strategies, and optimization hints.
 
-* **Reduced Prompt Complexity**. Once fine-tuned, you no longer need heavy prompt engineering for every query — the model defaults to compliant, efficient SQL generation.
+* **Reduced Prompt Complexity**. Once fine-tuned, you no longer need heavy prompt engineering for every query - the model defaults to compliant, efficient SQL generation.
 
 ### Trust Through Alignment
 
@@ -403,7 +403,7 @@ append_to_dataset("./provenance", "fine_tune_dataset.jsonl")
 * Enforce **schema whitelists** to prevent cross-tenant leakage.
 * Log all inputs/outputs for audit readiness.
 
-Here’s the new stand-alone paper as requested — **"Custom Text-to-SQL: Combining AnythingLLM with Open Source Tools like Vanna or PremSQL"** — designed to extend *The Ultimate Trust Model: Custom Local LLMs* into a concrete experimental reference architecture.
+Here’s the new stand-alone paper as requested - **"Custom Text-to-SQL: Combining AnythingLLM with Open Source Tools like Vanna or PremSQL"** - designed to extend *The Ultimate Trust Model: Custom Local LLMs* into a concrete experimental reference architecture.
 
 ### Experimentation-ready Architecture: Combining AnythingLLM with Open Source Tools like Vanna or PremSQL
 
@@ -416,7 +416,7 @@ Here is a practical, experimental reference architecture for building custom, sc
 | **AnythingLLM** | Multi-model orchestrator, RAG engine, knowledgebase builder, API/UI gateway. Manages prompt chaining, schema retrieval, and user interaction. |
 | **Vanna**       | Python-based, RAG-driven Text-to-SQL generation tool with schema grounding. Great for retrieval-driven SQL creation and extensibility.        |
 | **PremSQL**     | Fully local, privacy-first Text-to-SQL library, ideal for air-gapped deployments or strict compliance environments.                           |
-| **Local LLM**   | Fine-tuned model trained on schema, historical queries, and policies — no external, ungrounded facts.                                         |
+| **Local LLM**   | Fine-tuned model trained on schema, historical queries, and policies - no external, ungrounded facts.                                         |
 
 ```
 User Query
@@ -437,7 +437,7 @@ SQL Validator → Database Execution → Provenance Logger
 * Hosts **multiple local LLMs** (e.g., CodeLLaMA, Qwen2.5-Coder, MPT) for fallback or A/B testing.
 * Manages **context injection** from schema vector embeddings.
 * Provides **prompt templates** enforcing schema-only rules.
-* Handles **multi-tenant routing** — injecting tenant IDs, role constraints into prompts.
+* Handles **multi-tenant routing** - injecting tenant IDs, role constraints into prompts.
 
 #### Vanna Integration
 
@@ -510,7 +510,7 @@ def handle_user_query(query, engine="auto"):
     return result
 ```
 
-By combining AnythingLLM’s orchestration with Vanna and PremSQL’s specialized Text-to-SQL capabilities — and layering in local, fine-tuned models — this architecture provides a real, testable implementation path for *The Ultimate Trust Model: Custom Local LLMs*. It bridges the gap between high-level pseudocode and operational reality, creating a system that can be proven, audited, and evolved toward the highest possible trust in AI-driven database interactions.
+By combining AnythingLLM’s orchestration with Vanna and PremSQL’s specialized Text-to-SQL capabilities - and layering in local, fine-tuned models - this architecture provides a real, testable implementation path for *The Ultimate Trust Model: Custom Local LLMs*. It bridges the gap between high-level pseudocode and operational reality, creating a system that can be proven, audited, and evolved toward the highest possible trust in AI-driven database interactions.
 
 ## Trust Alignment: A Unified Framework
 
@@ -534,7 +534,7 @@ Strategic Impact:
 * Reduced operational risk in multi-tenant, regulated environments.
 * Scalable governance without sacrificing user experience.
 
-In high-stakes environments, trust is engineered — not assumed. By combining provenance tracking, schema-focused retrieval, fine-tuned alignment, and fully local models, you transform Text-to-SQL from a convenience feature into a cornerstone of enterprise-grade trustworthy AI.
+In high-stakes environments, trust is engineered - not assumed. By combining provenance tracking, schema-focused retrieval, fine-tuned alignment, and fully local models, you transform Text-to-SQL from a convenience feature into a cornerstone of enterprise-grade trustworthy AI.
 
 A custom, fully local Text-to-SQL LLM fine-tuned on your schema and historical queries, continuously trained on approved results, and isolated from external ungrounded facts delivers the highest achievable trust in AI-driven database access. This model transforms SQL generation from a generic capability into a governed, policy-aligned, explainable system suitable for mission-critical, regulated environments.
 

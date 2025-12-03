@@ -7,9 +7,9 @@ icon: MessageCircle
 
 > *“Trust doesn’t come from getting it right the first time. It comes from learning publicly and visibly every time you get it wrong.”*
 
-In AI-native systems, feedback loops are the operating system of trust. They are the core mechanism by which systems shift from "demo-grade intelligence" to "production-grade reliability." While most teams focus on model selection, prompt engineering, or grounding strategies, those only create the *illusion* of stability. True trust is built through continuous, structured, and observable learning from users — especially in systems built for high-stakes, B2B domains.
+In AI-native systems, feedback loops are the operating system of trust. They are the core mechanism by which systems shift from "demo-grade intelligence" to "production-grade reliability." While most teams focus on model selection, prompt engineering, or grounding strategies, those only create the *illusion* of stability. True trust is built through continuous, structured, and observable learning from users - especially in systems built for high-stakes, B2B domains.
 
-This section defines how we engineer feedback loops into our stack — using `surveilr`, SQL, Model Context Protocols (MCPs), Qualityfolio, and prompt-time intelligence — to build *self-improving*, *auditable*, and *trust-reinforcing* systems.
+This section defines how we engineer feedback loops into our stack - using `surveilr`, SQL, Model Context Protocols (MCPs), Qualityfolio, and prompt-time intelligence - to build *self-improving*, *auditable*, and *trust-reinforcing* systems.
 
 ## Why Static Prompt Engineering Isn't Enough
 
@@ -29,9 +29,9 @@ Here is an extended version of the section titled:
 
 ## Feedback Loops Beyond LLMs: A Return to First Principles
 
-While modern AI systems benefit from real-time prompt-level feedback, it’s essential to remember that feedback loops are not new — they’ve long been central to improving intelligent systems. The AI industry spent years developing reinforcement learning (RL), where agents learn to take actions in environments to maximize rewards.
+While modern AI systems benefit from real-time prompt-level feedback, it’s essential to remember that feedback loops are not new - they’ve long been central to improving intelligent systems. The AI industry spent years developing reinforcement learning (RL), where agents learn to take actions in environments to maximize rewards.
 
-In classic Reinforcement Learning from Human Feedback (RLHF), a model is tuned over time using rewards derived from user preferences — either implicit (clicks, retention) or explicit (surveys, corrections).
+In classic Reinforcement Learning from Human Feedback (RLHF), a model is tuned over time using rewards derived from user preferences - either implicit (clicks, retention) or explicit (surveys, corrections).
 
 However, in production B2B environments, full-blown RLHF is often too costly, slow, and opaque to deploy regularly. Instead, we adapt its best ideas:
 
@@ -44,7 +44,7 @@ This mental model allows us to simulate RLHF at the UX level, without expensive 
 
 ## Designing Feedback Loops into Traditional Web Interfaces
 
-We must also extend feedback loops beyond AI answers — to improve not just the model, but the entire product, support experience, and documentation system.
+We must also extend feedback loops beyond AI answers - to improve not just the model, but the entire product, support experience, and documentation system.
 
 Here’s how we embed AI-native feedback into existing websites, apps, customer portals, and internal tools:
 
@@ -73,7 +73,7 @@ At the end of complex support sessions, show a summary with:
 * Key documents cited
 * A single “Rate this interaction” or “Suggest corrections” modal
 
-Even a few submissions per week can signal major blind spots — and produce testable UATs.
+Even a few submissions per week can signal major blind spots - and produce testable UATs.
 
 ### Embedded Annotation Tools for Internal Teams
 
@@ -116,7 +116,7 @@ This matrix guarantees that feedback is not treated as noise, but as a first-cla
 
 ## Feedback-Driven Product Evolution as a Business Differentiator
 
-Ultimately, feedback loops are not just for model optimization — they are product strategy.
+Ultimately, feedback loops are not just for model optimization - they are product strategy.
 
 They:
 
@@ -132,11 +132,11 @@ We treat feedback loops as circular pipelines where:
 3. Engineers and QA derive testable improvements via Qualityfolio.
 4. Updates are traced, tested, and fed back into future interactions.
 
-This evidence-driven learning loop is our competitive moat. It ensures our AI systems aren’t just compliant and explainable — they’re actively evolving, just like our customers’ needs.
+This evidence-driven learning loop is our competitive moat. It ensures our AI systems aren’t just compliant and explainable - they’re actively evolving, just like our customers’ needs.
 
 ## Types of Feedback We Engineer for
 
-We treat every interaction — not just those marked with 👍 or 👎 — as feedback.
+We treat every interaction - not just those marked with 👍 or 👎 - as feedback.
 
 Structured Feedback
 
@@ -178,7 +178,7 @@ That means we can:
 * Retrieve only feedback related to specific clients, versions, or failure types
 * Auto-create test cases in Qualityfolio based on repeated feedback patterns
 
-This allows us to triage, visualize, and close loops on trust erosion — not just at the UX level, but deep in the LLM’s operational context.
+This allows us to triage, visualize, and close loops on trust erosion - not just at the UX level, but deep in the LLM’s operational context.
 
 ## Feedback Loop Engineering Patterns
 
@@ -227,16 +227,16 @@ To embody these principles, our teams follow these practices:
 * Every UAT failure becomes a ticket or test case, tracked in Qualityfolio and grounded in SQL
 * All feedback is stored as structured content in `surveilr`, versioned and auditable
 * No changes to prompts, MCPs, or fine-tunes are made without a clear link to recorded feedback
-* Feedback loops are built into onboarding — not just post-launch firefighting
+* Feedback loops are built into onboarding - not just post-launch firefighting
 
 ## Feedback Is The Product
 
-In AI-native systems, feedback is not telemetry — it's the raw material of trust.
+In AI-native systems, feedback is not telemetry - it's the raw material of trust.
 
-The smartest systems are not the ones that avoid mistakes, but the ones that learn visibly, consistently, and verifiably — and then prove it via passing UATs and grounded responses.
+The smartest systems are not the ones that avoid mistakes, but the ones that learn visibly, consistently, and verifiably - and then prove it via passing UATs and grounded responses.
 
 We don’t just ship models.
-We ship closed feedback loops that make trust a continuous property — not a one-time assertion.
+We ship closed feedback loops that make trust a continuous property - not a one-time assertion.
 
 Let me know if you'd like this inserted directly into the full engineering report.
 
