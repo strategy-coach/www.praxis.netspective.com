@@ -1,8 +1,832 @@
 ---
 title: Context Engineering - Sessions & Memory
-description: Google's framework for building stateful AI systems with sessions, memory architecture, and intelligent context assembly based on the Context Engineering whitepaper.
+description: A comprehensive guide to Google's framework for building stateful AI systems with persistent memory, intelligent context assembly, and scalable architecture.
 icon: Brain
 ---
 
-# Context Engineering: Sessions & Memory
-## Making AI Remember Like Humans Do
+## Introduction
+
+Context Engineering represents a paradigm shift in how we build AI applications. Rather than treating each interaction as isolated, Context Engineering provides the architectural foundation for AI systems that maintain continuity, learn from interactions, and deliver increasingly personalized experiences.
+
+This guide synthesizes Google's "Context Engineering: Sessions & Memory" whitepaper (November 2025), presenting the framework's seven core principles with both strategic insights for decision-makers and technical depth for implementation teams.
+
+### Who Should Read This Guide
+
+| Role | Key Takeaways |
+|------|---------------|
+| **Executive Leaders** | Strategic value of stateful AI, competitive differentiation, ROI considerations |
+| **Product Managers** | Feature planning, user experience implications, roadmap prioritization |
+| **Solution Architects** | System design patterns, integration strategies, scalability planning |
+| **Engineers** | Implementation details, technical trade-offs, performance optimization |
+| **Data & Privacy Officers** | Compliance considerations, data governance, user control mechanisms |
+
+---
+
+## The Core Concept
+
+**Context Engineering** is the discipline of strategically assembling relevant information into an AI model's context window at precisely the right moment.
+
+### The Fundamental Challenge
+
+Large Language Models (LLMs) have a critical limitation: they are inherently stateless. Each API call processes only the information explicitly provided in that request. Without intervention, every conversation starts from zero.
+
+### The Solution Framework
+
+Context Engineering addresses this by creating systems that:
+
+1. **Persist relevant information** across interactions
+2. **Intelligently retrieve** what matters for each query
+3. **Assemble optimal context** within token constraints
+4. **Continuously learn** from ongoing interactions
+
+### Business Impact
+
+| Without Context Engineering | With Context Engineering |
+|----------------------------|-------------------------|
+| Users repeat information constantly | Personalized experiences from day one |
+| Generic, one-size-fits-all responses | Contextually relevant recommendations |
+| High user friction and abandonment | Increased engagement and retention |
+| No competitive differentiation | Sustainable product moat |
+
+---
+
+## The Seven Principles Overview
+
+Google's framework is built on seven interconnected principles that work together to create intelligent, stateful AI systems.
+
+![Context Engineering Overview](/context-engineering-overview.drawio.svg)
+
+| Principle | Business Value | Technical Function |
+|-----------|---------------|-------------------|
+| **1. Sessions** | Organized, focused interactions | Bounded conversation management |
+| **2. Memory** | Personalized user experiences | Persistent knowledge storage |
+| **3. LLM-Generated Memories** | Zero-effort personalization | Automated information extraction |
+| **4. Provenance** | Trustworthy, debuggable systems | Metadata tracking and lineage |
+| **5. Push vs Pull Retrieval** | Fast, efficient responses | Intelligent context loading |
+| **6. Production Considerations** | Enterprise-ready deployment | Privacy, performance, scale |
+| **7. Orchestration** | Seamless user experiences | Coordinated context assembly |
+
+---
+
+## Principle 1: Sessions
+
+> **Definition:** A session is a bounded unit of interaction with a clear beginning, purpose, and end. Sessions provide structure while enabling continuity through persistent memory.
+
+### Understanding Sessions
+
+Think of a session as a focused work unit—similar to a meeting, a support ticket, or a project sprint. It has:
+
+- **Clear boundaries**: Defined start and end points
+- **Specific purpose**: A task or topic being addressed
+- **Captured outcomes**: Learnings that persist beyond the session
+
+![Session Lifecycle](/session-lifecycle.drawio.svg)
+
+### Session Components
+
+| Component | Description | Example |
+|-----------|-------------|---------|
+| **Events** | Individual interactions within the session | User messages, AI responses, tool executions |
+| **State** | Accumulated context during the session | Current document, active code file, conversation history |
+| **Lifecycle** | Session management operations | Create, update, pause, resume, close |
+
+### Design Principle
+
+**One logical task should correspond to one session.**
+
+- Debugging a specific issue → Single session
+- Planning a vacation → Single session
+- Switching from debugging to vacation planning → New session
+
+### Why This Matters
+
+Sessions provide the organizational structure that makes memory manageable. Without session boundaries, systems would accumulate undifferentiated data, making retrieval inefficient and context assembly chaotic.
+
+<details>
+<summary><strong>Technical Implementation Notes</strong></summary>
+
+Sessions map to familiar patterns across platforms:
+
+- **Web Applications**: HTTP session with server-side state management
+- **Mobile Apps**: App lifecycle with persistent local storage
+- **APIs**: Request context enriched with user profile data
+- **Database**: Session table with foreign keys to events, state snapshots
+
+Key considerations:
+- Session timeout policies (idle vs. absolute)
+- State serialization format (JSON, Protocol Buffers)
+- Event sourcing vs. state snapshot approaches
+- Multi-device session synchronization
+
+</details>
+
+---
+
+## Principle 2: Memory Architecture
+
+> **Definition:** Memory stores what the AI system learns about individual users—their preferences, behaviors, and context. Unlike general knowledge retrieval (RAG), memory is inherently personal.
+
+### Memory vs. RAG: A Critical Distinction
+
+Understanding the difference between Memory and Retrieval-Augmented Generation (RAG) is fundamental to Context Engineering.
+
+![Memory Types](/memory-types.drawio.svg)
+
+| Aspect | RAG (General Knowledge) | Memory (Personal Knowledge) |
+|--------|------------------------|---------------------------|
+| **Scope** | Organizational or public information | Individual user-specific data |
+| **Query** | "What is our refund policy?" | "What are this user's past returns?" |
+| **Updates** | When source documents change | Continuously from interactions |
+| **Personalization** | Same answer for all users | Tailored to individual context |
+
+### Two Types of Memory
+
+#### Declarative Memory: Facts and Preferences
+
+Static information that describes who the user is:
+
+- Demographics: "Lives in Seattle, works in finance"
+- Preferences: "Prefers dark mode, uses metric units"
+- Constraints: "Allergic to shellfish, vegetarian diet"
+- Technical context: "Uses TypeScript, deploys on AWS"
+
+#### Procedural Memory: Behaviors and Patterns
+
+Dynamic information about how the user operates:
+
+- Work patterns: "Checks emails first thing, most productive 9-11am"
+- Communication style: "Prefers bullet points over paragraphs"
+- Problem-solving approach: "Likes to see data before recommendations"
+- Learning preferences: "Wants examples before explanations"
+
+### The Combined Power
+
+When declarative and procedural memory work together, AI systems don't just know *about* users—they know how to work *with* them effectively.
+
+**Example Interaction:**
+
+```
+Without Memory:
+User: "Suggest a restaurant for tonight"
+AI: "Here are popular restaurants in your area: [generic list]"
+
+With Memory:
+User: "Suggest a restaurant for tonight"
+AI: "Based on your preference for vegetarian cuisine, quiet atmospheres,
+     and your positive experience at Green Leaf last month, I'd recommend
+     Sage Kitchen—it has similar ambiance and excellent reviews for their
+     seasonal vegetable tasting menu."
+```
+
+<details>
+<summary><strong>Technical Implementation Notes</strong></summary>
+
+Memory storage considerations:
+
+**Schema Design:**
+```
+Memory {
+  id: UUID
+  user_id: UUID
+  type: DECLARATIVE | PROCEDURAL
+  category: string (e.g., "dietary", "communication", "technical")
+  content: string
+  confidence: float (0.0-1.0)
+  source_session_id: UUID
+  created_at: timestamp
+  updated_at: timestamp
+  last_accessed: timestamp
+  access_count: integer
+  user_verified: boolean
+  embedding: vector(1536)
+}
+```
+
+**Storage Options:**
+- Vector databases (Pinecone, Weaviate, pgvector) for semantic search
+- Key-value stores (Redis) for high-frequency access patterns
+- Relational databases for structured queries and joins
+
+</details>
+
+---
+
+## Principle 3: LLM-Generated Memories
+
+> **Definition:** The AI system itself determines what information is worth remembering, automatically extracting, consolidating, and storing relevant facts and patterns from conversations.
+
+### The Automation Advantage
+
+Traditional approaches require developers to manually define extraction rules—a brittle approach that fails when conversation patterns change. LLM-powered memory generation adapts dynamically to natural conversation.
+
+![Auto Learning Process](/auto-learning.drawio.svg)
+
+### The Three-Stage Process
+
+#### Stage 1: Extraction
+
+During conversations, the system identifies information worth preserving:
+
+**High-Value Signals:**
+- Explicit preferences: "I prefer morning meetings"
+- Stated constraints: "I'm on a tight deadline"
+- Behavioral indicators: User consistently asks for code examples first
+
+**Filtered Out:**
+- Conversational filler: "um", "you know", "like"
+- Transient context: "I'm currently looking at..."
+- Already-stored information: Redundant mentions
+
+#### Stage 2: Consolidation
+
+New information is merged with existing memories:
+
+```
+Existing Memory: "User works at a mid-size company"
+New Information: "We have 200+ developers now"
+Consolidated: "User works at large company (200+ developers)"
+              Confidence: HIGH (updated from direct statement)
+```
+
+**Conflict Resolution:**
+- Newer explicit statements override older implicit inferences
+- Higher confidence scores take precedence
+- User-verified information supersedes AI-inferred data
+
+#### Stage 3: Storage
+
+Processed memories are stored with rich metadata for efficient retrieval:
+
+- Semantic embeddings for similarity search
+- Categorical tags for filtered queries
+- Provenance data for debugging and transparency
+
+### What Gets Remembered
+
+| Category | Examples | Priority |
+|----------|----------|----------|
+| **Safety-Critical** | Allergies, medical conditions, accessibility needs | Highest |
+| **Core Preferences** | Communication style, technical stack, timezone | High |
+| **Behavioral Patterns** | Work habits, decision-making style | Medium |
+| **Contextual Details** | Project names, team members, recent topics | Lower |
+
+<details>
+<summary><strong>Technical Implementation Notes</strong></summary>
+
+**Extraction Prompt Pattern:**
+```
+Analyze this conversation segment and extract any user-specific information
+worth remembering for future interactions.
+
+For each extracted item, provide:
+- content: The specific information
+- type: DECLARATIVE or PROCEDURAL
+- category: Classification (dietary, technical, communication, etc.)
+- confidence: How certain (explicit statement vs. inference)
+- reasoning: Why this is worth remembering
+
+Conversation:
+{conversation_segment}
+
+Existing memories for context:
+{current_memories}
+```
+
+**Consolidation Logic:**
+1. Generate embeddings for new extractions
+2. Find similar existing memories (cosine similarity > 0.85)
+3. For matches: Update content, increase confidence, refresh timestamp
+4. For new: Create memory entry with initial confidence score
+5. For conflicts: Apply resolution rules, maintain history
+
+</details>
+
+---
+
+## Principle 4: Provenance
+
+> **Definition:** Every memory entry includes metadata documenting its origin, confidence level, and verification status. Provenance enables debugging, builds trust, and supports user control.
+
+### Why Provenance Matters
+
+Without provenance, memory systems become black boxes. When something goes wrong, there's no way to understand why or how to fix it.
+
+![Provenance](/provenance.drawio.svg)
+
+### Essential Metadata
+
+| Field | Purpose | Example |
+|-------|---------|---------|
+| **Source** | Which session/interaction created this | "Extracted from debugging session, Nov 15" |
+| **Timestamp** | When was this learned | "Created 3 days ago, updated yesterday" |
+| **Confidence** | How certain is this information | "HIGH (mentioned 5+ times)" vs "LOW (mentioned once)" |
+| **Evidence Count** | How many supporting data points | "Observed in 12 separate interactions" |
+| **User Verified** | Did the user explicitly confirm | "User corrected this value on Nov 20" |
+| **Related Memories** | Connected information | "Links to: preferred IDE, coding style" |
+
+### Debugging with Provenance
+
+**Scenario:** AI recommends a steakhouse to a vegetarian user.
+
+**Without Provenance:**
+- "The AI made a mistake" → No path to resolution
+
+**With Provenance:**
+- Investigation reveals: Memory shows "enjoys steak" with LOW confidence
+- Source: Single casual mention 6 months ago: "my colleague makes great steaks"
+- Resolution: Update confidence model, add verification prompt for dietary info
+
+### Building User Trust
+
+Provenance enables transparency features that build user confidence:
+
+- "Here's what I remember about you" dashboards
+- "Why did you suggest this?" explanations
+- "This recommendation is based on..." citations
+
+<details>
+<summary><strong>Technical Implementation Notes</strong></summary>
+
+**Provenance Schema Extension:**
+```
+MemoryProvenance {
+  memory_id: UUID
+  source_type: SESSION | USER_INPUT | SYSTEM_INFERENCE | INTEGRATION
+  source_reference: string (session_id, form_id, etc.)
+  extraction_method: string (explicit, inferred, imported)
+  confidence_history: [{timestamp, score, reason}]
+  verification_history: [{timestamp, method, result}]
+  access_log: [{timestamp, query_context, retrieval_rank}]
+}
+```
+
+**Confidence Scoring Factors:**
+- Explicit user statement: +0.3
+- Repeated mention (each): +0.1
+- User verification: +0.4
+- Time decay: -0.05 per month without reinforcement
+- Contradiction detected: -0.2
+
+</details>
+
+---
+
+## Principle 5: Push vs. Pull Retrieval
+
+> **Definition:** Strategic decisions about which memories to proactively load (push) versus retrieve on-demand (pull) based on relevance, criticality, and performance requirements.
+
+### The Retrieval Spectrum
+
+Not all memories are needed in every context. Efficient systems balance always-available information against on-demand retrieval.
+
+![Push vs Pull](/push-pull.drawio.svg)
+
+### Push (Proactive) Retrieval
+
+Information loaded automatically at session start:
+
+| Category | Examples | Rationale |
+|----------|----------|-----------|
+| **Identity** | Name, timezone, language | Needed for basic personalization |
+| **Safety-Critical** | Allergies, medical alerts | Must never be missed |
+| **Active Context** | Current project, recent topics | High likelihood of relevance |
+| **High-Confidence Preferences** | Verified communication style | Shapes every interaction |
+
+### Pull (Reactive) Retrieval
+
+Information retrieved when contextually relevant:
+
+| Category | Examples | Trigger |
+|----------|----------|---------|
+| **Historical Context** | Past conversations, old projects | Semantic similarity to current query |
+| **Domain-Specific** | Technical preferences for specific tools | Mentioned technology detected |
+| **Procedural Patterns** | Problem-solving approaches | Task type identified |
+| **Archived Preferences** | Outdated but potentially relevant info | Explicit temporal reference |
+
+### The Balance Trade-offs
+
+| Approach | Advantages | Disadvantages |
+|----------|------------|---------------|
+| **Heavy Push** | Fast response, no retrieval latency | Wasted tokens, higher costs, context dilution |
+| **Heavy Pull** | Efficient token usage | Retrieval latency, risk of missing critical info |
+| **Balanced** | Optimized performance and relevance | Requires careful tuning and monitoring |
+
+### Decision Framework
+
+| Question | If Yes → | If No → |
+|----------|----------|---------|
+| Needed in 90%+ of interactions? | Push | Pull |
+| Safety or compliance critical? | Push | Pull |
+| Updated in last 7 days? | Push | Pull |
+| User-verified information? | Push | Pull |
+| Context-dependent relevance? | Pull | Push |
+| Historical or archival? | Pull | Push |
+
+<details>
+<summary><strong>Technical Implementation Notes</strong></summary>
+
+**Push Loading Strategy:**
+```python
+def load_proactive_context(user_id: str) -> Context:
+    return Context(
+        identity=get_user_profile(user_id),
+        safety_critical=get_safety_memories(user_id, min_confidence=0.8),
+        active_project=get_current_project_context(user_id),
+        recent_high_confidence=get_memories(
+            user_id,
+            min_confidence=0.9,
+            updated_after=days_ago(7),
+            limit=20
+        )
+    )
+```
+
+**Pull Retrieval Strategy:**
+```python
+def retrieve_reactive_context(user_id: str, query: str) -> List[Memory]:
+    query_embedding = embed(query)
+
+    return vector_search(
+        user_id=user_id,
+        embedding=query_embedding,
+        min_similarity=0.75,
+        exclude_already_loaded=True,
+        limit=10
+    )
+```
+
+**Performance Targets:**
+- Push retrieval: < 50ms
+- Pull retrieval: < 200ms
+- Total context assembly: < 500ms
+
+</details>
+
+---
+
+## Principle 6: Production Considerations
+
+> **Definition:** Enterprise deployment requires addressing privacy, performance, and scale challenges that don't exist in prototypes or demos.
+
+### The Production Gap
+
+Building a working demo is straightforward. Building a system that serves millions of users with enterprise-grade reliability is fundamentally different.
+
+![Production Challenges](/production-challenges.drawio.svg)
+
+### Challenge 1: Privacy and Compliance
+
+**Requirements:**
+- Complete user data isolation (no cross-user leakage)
+- Regulatory compliance (GDPR, CCPA, HIPAA where applicable)
+- User control over their data (view, edit, delete, export)
+- Audit logging for compliance verification
+
+![Privacy Controls](/privacy-controls.drawio.svg)
+
+**Implementation Essentials:**
+
+| Requirement | Implementation |
+|-------------|----------------|
+| Data Isolation | User-scoped database partitions, row-level security |
+| Encryption | At-rest (AES-256) and in-transit (TLS 1.3) |
+| Access Control | Role-based permissions, API authentication |
+| User Controls | Self-service dashboard for memory management |
+| Audit Trail | Immutable logs of all data access and modifications |
+| Data Portability | Export functionality (JSON, CSV formats) |
+| Right to Deletion | Complete data purge capability |
+
+### Challenge 2: Performance at Scale
+
+**Requirements:**
+- Sub-second response times regardless of memory volume
+- Consistent performance across geographic regions
+- Graceful degradation under load
+
+**Optimization Strategies:**
+
+| Strategy | Implementation | Impact |
+|----------|----------------|--------|
+| **Caching** | Hot memory cache (Redis), CDN for static assets | 10x latency reduction |
+| **Indexing** | Vector indices, category-based partitions | O(log n) vs O(n) retrieval |
+| **Batching** | Aggregate writes, bulk embedding generation | 5x throughput improvement |
+| **Async Processing** | Background consolidation, deferred extraction | No user-facing latency |
+
+### Challenge 3: Scale Economics
+
+**The Math:**
+- 1 million users × 1,000 memories each = 1 billion records
+- 1 billion × 1,536-dimension embeddings × 4 bytes = 6+ TB vector data
+- Plus metadata, indices, replicas, backups
+
+**Cost Management Tiers:**
+
+| Tier | Storage | Access Pattern | Cost Profile |
+|------|---------|----------------|--------------|
+| **Hot** | High-performance vector DB | Frequently accessed, real-time | Highest |
+| **Warm** | Standard vector DB | Occasional access | Moderate |
+| **Cold** | Compressed object storage | Rare access, batch retrieval | Lowest |
+| **Archive** | Deep archive | User request only | Minimal |
+
+<details>
+<summary><strong>Technical Implementation Notes</strong></summary>
+
+**Infrastructure Architecture:**
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    Load Balancer (Global)                   │
+├─────────────────────────────────────────────────────────────┤
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
+│  │   API GW    │  │   API GW    │  │   API GW    │         │
+│  │  (US-East)  │  │  (EU-West)  │  │  (AP-South) │         │
+│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘         │
+├─────────┼────────────────┼────────────────┼─────────────────┤
+│  ┌──────▼──────┐  ┌──────▼──────┐  ┌──────▼──────┐         │
+│  │   Redis     │  │   Redis     │  │   Redis     │         │
+│  │   Cache     │  │   Cache     │  │   Cache     │         │
+│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘         │
+├─────────┼────────────────┼────────────────┼─────────────────┤
+│         └────────────────┼────────────────┘                 │
+│                   ┌──────▼──────┐                           │
+│                   │   Vector    │                           │
+│                   │   Database  │                           │
+│                   │  (Sharded)  │                           │
+│                   └─────────────┘                           │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**Monitoring Metrics:**
+- P50/P95/P99 retrieval latency
+- Cache hit ratio (target: >90%)
+- Memory extraction accuracy
+- Storage growth rate
+- Cost per user per month
+
+</details>
+
+---
+
+## Principle 7: Context Assembly Orchestration
+
+> **Definition:** The coordination layer that brings all components together—parsing intent, retrieving relevant context, assembling the optimal prompt, generating responses, and extracting new learnings.
+
+### The Orchestration Flow
+
+Every user query triggers a sophisticated pipeline that executes in milliseconds:
+
+![Orchestration](/orchestration.drawio.svg)
+
+### The Seven-Step Pipeline
+
+| Step | Function | Latency Target |
+|------|----------|---------------|
+| **1. Intent Parsing** | Understand what the user needs | < 10ms |
+| **2. Memory Retrieval** | Load proactive + pull reactive memories | < 100ms |
+| **3. Knowledge Retrieval** | Query RAG systems for general information | < 150ms |
+| **4. Tool Execution** | Fetch real-time data if needed | < 200ms |
+| **5. Context Assembly** | Prioritize, deduplicate, fit token budget | < 50ms |
+| **6. Response Generation** | LLM inference with assembled context | < 500ms |
+| **7. Memory Extraction** | Identify new information to remember | Async |
+
+### Intent-Driven Context Selection
+
+Different query types require different context compositions:
+
+| Query Type | Memory Weight | RAG Weight | Tools Weight |
+|------------|--------------|------------|--------------|
+| Personal question | High | Low | Low |
+| Factual question | Low | High | Medium |
+| Task execution | Medium | Medium | High |
+| Casual conversation | Low | Low | Low |
+
+### Token Budget Management
+
+With finite context windows, allocation strategy matters:
+
+```
+Example: 128K Token Context Window
+
+Reserved:
+├── System prompt:        2,000 tokens
+├── User query:           1,000 tokens
+├── Response budget:      4,000 tokens
+└── Available context:  121,000 tokens
+
+Context Allocation:
+├── Push memories:        5,000-10,000 tokens (critical)
+├── Session history:     20,000-30,000 tokens (recent)
+├── Pull memories:       10,000-20,000 tokens (relevant)
+├── RAG results:         40,000-50,000 tokens (knowledge)
+└── Tool outputs:        10,000-20,000 tokens (real-time)
+```
+
+### Quality Assurance
+
+Before final assembly, the orchestrator validates:
+
+- **Consistency**: No contradictory information
+- **Relevance**: All included context serves the query
+- **Recency**: Newer information properly weighted
+- **Completeness**: Critical context not omitted
+
+<details>
+<summary><strong>Technical Implementation Notes</strong></summary>
+
+**Orchestration Pipeline:**
+```python
+async def process_query(user_id: str, query: str, session_id: str):
+    # Step 1: Parse intent
+    intent = await classify_intent(query)
+
+    # Steps 2-4: Parallel retrieval
+    memories, knowledge, tool_results = await asyncio.gather(
+        retrieve_memories(user_id, query, intent),
+        retrieve_knowledge(query, intent),
+        execute_tools(query, intent) if intent.requires_tools else None
+    )
+
+    # Step 5: Assemble context
+    context = assemble_context(
+        memories=memories,
+        knowledge=knowledge,
+        tools=tool_results,
+        session=get_session_history(session_id),
+        token_budget=calculate_budget(intent)
+    )
+
+    # Step 6: Generate response
+    response = await generate_response(query, context)
+
+    # Step 7: Extract memories (async, non-blocking)
+    asyncio.create_task(
+        extract_memories(user_id, session_id, query, response)
+    )
+
+    return response
+```
+
+**Context Assembly Priority:**
+1. Safety-critical memories (always include)
+2. Direct query matches (high similarity)
+3. Session context (recent conversation)
+4. Supporting memories (moderate similarity)
+5. General knowledge (RAG results)
+6. Tool outputs (real-time data)
+
+</details>
+
+---
+
+## Practical Applications
+
+### Application 1: Development Assistant
+
+![Coding Helper Example](/coding-helper-example.drawio.svg)
+
+| Component | Implementation |
+|-----------|----------------|
+| **Session** | Single debugging task or feature implementation |
+| **Declarative Memory** | Tech stack, IDE preferences, coding standards |
+| **Procedural Memory** | Debugging approach, review preferences |
+| **Push Context** | Current project, active files, recent errors |
+| **Pull Context** | Similar past bugs, historical solutions |
+
+### Application 2: Content Creation Assistant
+
+![Writing Assistant Example](/writing-assistant-example.drawio.svg)
+
+| Component | Implementation |
+|-----------|----------------|
+| **Session** | Single document or article creation |
+| **Declarative Memory** | Target audience, brand voice, topic expertise |
+| **Procedural Memory** | Writing style, structure preferences |
+| **Push Context** | Current draft, style guidelines |
+| **Pull Context** | Past articles, research notes |
+
+---
+
+## Common Challenges and Solutions
+
+### Challenge 1: Cold Start Problem
+
+New users have no memory history, limiting personalization.
+
+![Cold Start Solution](/cold-start.drawio.svg)
+
+**Solutions:**
+
+| Approach | Implementation |
+|----------|----------------|
+| **Smart Defaults** | Industry/role-based initial preferences |
+| **Onboarding Flow** | Structured preference capture |
+| **Rapid Learning** | Aggressive extraction from early sessions |
+| **Progressive Enhancement** | Increasing personalization over time |
+
+### Challenge 2: Information Conflicts
+
+User preferences change over time, creating contradictions.
+
+![Outdated Info Solution](/outdated-info.drawio.svg)
+
+**Resolution Framework:**
+
+| Scenario | Resolution |
+|----------|------------|
+| Newer explicit statement | Overrides older information |
+| Higher confidence source | Takes precedence |
+| User correction | Highest priority |
+| Temporary vs. permanent | Track with appropriate metadata |
+
+### Challenge 3: Memory Bloat
+
+Long-term users accumulate thousands of memories.
+
+![Memory Cleanup](/memory-cleanup.drawio.svg)
+
+**Lifecycle Management:**
+
+| Memory State | Criteria | Action |
+|--------------|----------|--------|
+| **Active** | High confidence, recently accessed | Keep in hot storage |
+| **Warm** | High confidence, not recently accessed | Move to standard storage |
+| **Cold** | Low confidence, old | Compress, move to archive |
+| **Expired** | Low confidence, very old, never verified | Delete |
+
+---
+
+## Strategic Value
+
+### The Competitive Advantage
+
+![With vs Without Context Engineering](/with-without-comparison.drawio.svg)
+
+Organizations that implement Context Engineering effectively gain:
+
+| Advantage | Mechanism |
+|-----------|-----------|
+| **User Stickiness** | Switching costs increase as personalization deepens |
+| **Engagement Growth** | Better responses drive more interactions |
+| **Reduced Churn** | Users reluctant to lose accumulated context |
+| **Premium Positioning** | Advanced memory as differentiating feature |
+| **Compound Improvement** | System improves with every interaction |
+
+### Industry Examples
+
+| Product | Context Engineering Application |
+|---------|-------------------------------|
+| **Gmail Smart Compose** | Writing style memory, common phrases |
+| **Spotify Discover Weekly** | Music preferences, listening patterns |
+| **Netflix** | Viewing history, rating patterns, time preferences |
+| **GitHub Copilot** | Code style, project context, common patterns |
+
+---
+
+## Glossary
+
+| Term | Definition | Technical Context |
+|------|------------|-------------------|
+| **Context Window** | Maximum input size an LLM can process | Measured in tokens (8K-200K+ typical) |
+| **Declarative Memory** | Facts and preferences about a user | Static profile data |
+| **Procedural Memory** | Behavioral patterns and workflows | Dynamic behavioral data |
+| **LLM** | Large Language Model | The AI model generating responses |
+| **Orchestration** | Coordination of retrieval and assembly | The system's control plane |
+| **Provenance** | Origin and confidence metadata | Audit trail for memories |
+| **Push Retrieval** | Proactively loaded context | Always-available information |
+| **Pull Retrieval** | On-demand context retrieval | Query-triggered information |
+| **RAG** | Retrieval-Augmented Generation | General knowledge retrieval |
+| **Session** | Bounded interaction unit | Conversation container |
+| **Token** | Text processing unit | ~0.75 words in English |
+| **Vector Database** | Semantic search storage | Embedding-based retrieval |
+
+---
+
+## Summary
+
+![Seven Keys Summary](/seven-keys-summary.drawio.svg)
+
+Context Engineering transforms AI applications from stateless features into stateful products that deliver compounding value. The seven principles work together:
+
+1. **Sessions** provide organizational structure
+2. **Memory** enables personalization
+3. **LLM-Generated Memories** automate learning
+4. **Provenance** ensures trustworthiness
+5. **Push/Pull Retrieval** optimizes performance
+6. **Production Considerations** enable scale
+7. **Orchestration** coordinates the entire system
+
+The result: AI systems that don't just respond to queries, but understand users and improve with every interaction.
+
+---
+
+## Related Resources
+
+Explore related topics in the Praxis documentation:
+
+- [Context Engineering and AI Prompting](context-engineering-ai-prompting) — Foundational prompting strategies
+- [Vector Database and Enterprise RAG](vector-db-enterprise-rag-strategy) — RAG infrastructure implementation
+- [surveilr SQL-Native Grounding](surveilr-sql-native-grounding) — SQL-based context composition
+- [Multi-Layered Retrieval](multi-layered-retrieval-verifiable-ai) — Advanced retrieval architectures
+
+---
+
+*Based on Google's "Context Engineering: Sessions & Memory" whitepaper (November 2025)*

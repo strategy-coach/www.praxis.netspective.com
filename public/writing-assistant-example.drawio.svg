@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="700px" height="280px" viewBox="-0.5 -0.5 700 280" content="&lt;mxfile host=&quot;app.diagrams.net&quot;&gt;&lt;diagram name=&quot;Writing Assistant&quot;&gt;&lt;/diagram&gt;&lt;/mxfile&gt;">
+  <defs>
+    <marker id="arrowhead8" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="700" height="280" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="350" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Example 2: A Writing Assistant</text>
+
+  <!-- What AI Remembers Box -->
+  <rect x="20" y="50" width="200" height="130" rx="10" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+  <text x="120" y="75" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#7b1fa2">What AI Remembers</text>
+
+  <rect x="35" y="90" width="170" height="25" rx="4" fill="#ffffff" stroke="#ab47bc" stroke-width="1"/>
+  <text x="120" y="107" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#1a1a2e">✍️ Short paragraphs</text>
+
+  <rect x="35" y="120" width="170" height="25" rx="4" fill="#ffffff" stroke="#ab47bc" stroke-width="1"/>
+  <text x="120" y="137" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#1a1a2e">📊 Start articles with stats</text>
+
+  <rect x="35" y="150" width="170" height="25" rx="4" fill="#ffffff" stroke="#ab47bc" stroke-width="1"/>
+  <text x="120" y="167" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#1a1a2e">🎯 Business audience</text>
+
+  <!-- What Happens Box -->
+  <rect x="240" y="50" width="440" height="130" rx="10" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+  <text x="460" y="75" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#e65100">What Happens</text>
+
+  <!-- Flow -->
+  <rect x="260" y="90" width="100" height="35" rx="6" fill="#ffffff" stroke="#ffb74d" stroke-width="1"/>
+  <text x="310" y="105" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#1a1a2e">You: "Help</text>
+  <text x="310" y="118" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#1a1a2e">write intro"</text>
+
+  <path d="M 360 107 L 375 107" stroke="#666" stroke-width="1.5" fill="none" marker-end="url(#arrowhead8)"/>
+
+  <rect x="380" y="90" width="90" height="35" rx="6" fill="#ffffff" stroke="#ffb74d" stroke-width="1"/>
+  <text x="425" y="105" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#1a1a2e">AI recalls</text>
+  <text x="425" y="118" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#1a1a2e">your style</text>
+
+  <path d="M 470 107 L 485 107" stroke="#666" stroke-width="1.5" fill="none" marker-end="url(#arrowhead8)"/>
+
+  <rect x="490" y="90" width="80" height="35" rx="6" fill="#ffffff" stroke="#ffb74d" stroke-width="1"/>
+  <text x="530" y="105" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#1a1a2e">Finds</text>
+  <text x="530" y="118" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#1a1a2e">statistics</text>
+
+  <path d="M 570 107 L 585 107" stroke="#666" stroke-width="1.5" fill="none" marker-end="url(#arrowhead8)"/>
+
+  <rect x="590" y="90" width="75" height="35" rx="6" fill="#ffffff" stroke="#ffb74d" stroke-width="1"/>
+  <text x="627" y="105" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#1a1a2e">Matches</text>
+  <text x="627" y="118" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#1a1a2e">tone</text>
+
+  <!-- AI Response -->
+  <rect x="260" y="135" width="405" height="40" rx="6" fill="#c8e6c9" stroke="#4caf50" stroke-width="2"/>
+  <text x="462" y="155" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#1a1a2e">AI: "Here's an intro in your style: '87% of companies</text>
+  <text x="462" y="168" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#1a1a2e">claim...' This matches your stat-driven hooks."</text>
+
+  <!-- Arrow connecting boxes -->
+  <path d="M 220 115 L 240 115" stroke="#9c27b0" stroke-width="2" stroke-dasharray="4,2" fill="none" marker-end="url(#arrowhead8)"/>
+
+  <!-- Key insight -->
+  <rect x="20" y="200" width="660" height="60" rx="8" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+  <text x="350" y="225" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#2e7d32">✨ The Magic</text>
+  <text x="350" y="245" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">AI remembers your writing style + audience + preferences = content that sounds like YOU</text>
+</svg>

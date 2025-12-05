@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="650px" height="130px" viewBox="-0.5 -0.5 650 130" content="&lt;mxfile host=&quot;app.diagrams.net&quot;&gt;&lt;diagram name=&quot;Memory Cleanup&quot;&gt;&lt;/diagram&gt;&lt;/mxfile&gt;">
+  <defs/>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="650" height="130" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="325" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Problem 3: Too Many Memories - The Solution</text>
+
+  <!-- Memory Cleanup Box -->
+  <rect x="20" y="45" width="610" height="70" rx="10" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+  <text x="325" y="67" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#e65100">Memory Cleanup Strategy</text>
+
+  <!-- Three categories -->
+  <rect x="40" y="78" width="180" height="30" rx="6" fill="#c8e6c9" stroke="#4caf50" stroke-width="2"/>
+  <text x="130" y="98" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#2e7d32">Important + Recent = Keep</text>
+
+  <rect x="235" y="78" width="180" height="30" rx="6" fill="#fff8e1" stroke="#ffa726" stroke-width="2"/>
+  <text x="325" y="98" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#e65100">Important + Old = Archive</text>
+
+  <rect x="430" y="78" width="180" height="30" rx="6" fill="#ffcdd2" stroke="#ef5350" stroke-width="2"/>
+  <text x="520" y="98" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#c62828">Not Important + Old = Delete</text>
+</svg>

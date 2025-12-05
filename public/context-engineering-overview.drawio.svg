@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="700px" height="500px" viewBox="-0.5 -0.5 700 500" content="&lt;mxfile host=&quot;app.diagrams.net&quot;&gt;&lt;diagram name=&quot;Context Engineering Overview&quot;&gt;&lt;mxGraphModel dx=&quot;1422&quot; dy=&quot;794&quot; grid=&quot;1&quot; gridSize=&quot;10&quot; guides=&quot;1&quot; tooltips=&quot;1&quot; connect=&quot;1&quot; arrows=&quot;1&quot; fold=&quot;1&quot; page=&quot;1&quot; pageScale=&quot;1&quot; pageWidth=&quot;827&quot; pageHeight=&quot;1169&quot;&gt;&lt;root&gt;&lt;mxCell id=&quot;0&quot;/&gt;&lt;mxCell id=&quot;1&quot; parent=&quot;0&quot;/&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;&lt;/diagram&gt;&lt;/mxfile&gt;">
+  <defs/>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="700" height="500" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="350" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#1a1a2e">How Context Engineering Works</text>
+
+  <!-- What You See Section -->
+  <rect x="20" y="50" width="300" height="120" rx="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="170" y="75" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1976d2">What You See</text>
+
+  <!-- User asks question -->
+  <rect x="40" y="90" width="120" height="50" rx="8" fill="#ffffff" stroke="#42a5f5" stroke-width="2"/>
+  <text x="100" y="110" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">👤 You ask</text>
+  <text x="100" y="125" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">a question</text>
+
+  <!-- Arrow -->
+  <path d="M 160 115 L 180 115" stroke="#42a5f5" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- AI gives answer -->
+  <rect x="180" y="90" width="120" height="50" rx="8" fill="#c8e6c9" stroke="#43a047" stroke-width="2"/>
+  <text x="240" y="110" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">🤖 AI gives</text>
+  <text x="240" y="125" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">smart answer</text>
+
+  <!-- Behind the Scenes Section -->
+  <rect x="20" y="190" width="660" height="290" rx="10" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+  <text x="350" y="215" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#e65100">What Happens Behind the Scenes</text>
+
+  <!-- AI figures out -->
+  <path d="M 320 235 L 380 235 L 380 280 L 320 280 L 290 257.5 Z" fill="#fff8e1" stroke="#ffa726" stroke-width="2"/>
+  <text x="340" y="253" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#1a1a2e">AI figures out</text>
+  <text x="340" y="268" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#1a1a2e">what you need</text>
+
+  <!-- Arrow from user to AI figures out -->
+  <path d="M 100 140 L 100 180 L 340 180 L 340 235" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Three sources -->
+  <!-- Memories -->
+  <rect x="80" y="310" width="140" height="60" rx="8" fill="#e8f5e9" stroke="#66bb6a" stroke-width="2"/>
+  <text x="150" y="335" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">📁 Checks your</text>
+  <text x="150" y="352" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">memories</text>
+
+  <!-- Knowledge -->
+  <rect x="280" y="310" width="140" height="60" rx="8" fill="#e3f2fd" stroke="#42a5f5" stroke-width="2"/>
+  <text x="350" y="335" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">📚 Looks up general</text>
+  <text x="350" y="352" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">knowledge</text>
+
+  <!-- Real-time data -->
+  <rect x="480" y="310" width="140" height="60" rx="8" fill="#fce4ec" stroke="#ec407a" stroke-width="2"/>
+  <text x="550" y="335" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">🔧 Gets real-time</text>
+  <text x="550" y="352" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">data</text>
+
+  <!-- Arrows from AI figures out to sources -->
+  <path d="M 310 280 L 150 310" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 350 280 L 350 310" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 380 280 L 550 310" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Puts it together -->
+  <rect x="280" y="400" width="140" height="50" rx="8" fill="#f3e5f5" stroke="#ab47bc" stroke-width="2"/>
+  <text x="350" y="420" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">🧠 Puts it all</text>
+  <text x="350" y="437" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">together</text>
+
+  <!-- Arrows from sources to puts together -->
+  <path d="M 150 370 L 300 400" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 350 370 L 350 400" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 550 370 L 400 400" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow to response -->
+  <path d="M 350 450 L 350 470 L 600 470 L 600 130 L 310 130" stroke="#43a047" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Learns something new -->
+  <rect x="500" y="400" width="140" height="50" rx="8" fill="#fff8e1" stroke="#ffb300" stroke-width="2"/>
+  <text x="570" y="420" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">💾 Learns something</text>
+  <text x="570" y="437" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">new about you</text>
+
+  <!-- Arrow from response to learns -->
+  <path d="M 420 425 L 500 425" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow from learns back to memories -->
+  <path d="M 570 450 L 570 470 L 50 470 L 50 340 L 80 340" stroke="#ffb300" stroke-width="2" stroke-dasharray="5,5" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrowhead marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+</svg>

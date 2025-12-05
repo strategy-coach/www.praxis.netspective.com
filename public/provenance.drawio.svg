@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="700px" height="300px" viewBox="-0.5 -0.5 700 300" content="&lt;mxfile host=&quot;app.diagrams.net&quot;&gt;&lt;diagram name=&quot;Provenance&quot;&gt;&lt;/diagram&gt;&lt;/mxfile&gt;">
+  <defs>
+    <marker id="arrowhead4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="700" height="300" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="350" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#1a1a2e">Provenance - Keeping Receipts</text>
+
+  <!-- Memory with Provenance Box -->
+  <rect x="20" y="50" width="660" height="230" rx="10" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+  <text x="350" y="80" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2e7d32">Memory with Provenance</text>
+
+  <!-- Main memory item -->
+  <rect x="60" y="100" width="200" height="60" rx="10" fill="#c8e6c9" stroke="#66bb6a" stroke-width="2"/>
+  <text x="160" y="125" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1a1a2e">🥗 You're vegetarian</text>
+  <text x="160" y="145" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#666">(The memory itself)</text>
+
+  <!-- Arrow branches -->
+  <path d="M 260 130 L 300 100" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead4)"/>
+  <path d="M 260 130 L 300 130" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead4)"/>
+  <path d="M 260 130 L 300 160" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead4)"/>
+  <path d="M 260 130 L 300 190" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead4)"/>
+
+  <!-- Provenance details -->
+  <!-- When saved -->
+  <rect x="310" y="85" width="200" height="35" rx="6" fill="#ffffff" stroke="#42a5f5" stroke-width="2"/>
+  <text x="410" y="107" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">📅 Saved: November 10, 2025</text>
+
+  <!-- Source -->
+  <rect x="310" y="125" width="200" height="35" rx="6" fill="#ffffff" stroke="#ff9800" stroke-width="2"/>
+  <text x="410" y="147" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">💬 Source: Lunch planning</text>
+
+  <!-- Confidence -->
+  <rect x="310" y="165" width="200" height="35" rx="6" fill="#ffffff" stroke="#9c27b0" stroke-width="2"/>
+  <text x="410" y="187" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">⭐ Confidence: HIGH (5x)</text>
+
+  <!-- Verified -->
+  <rect x="310" y="205" width="200" height="35" rx="6" fill="#ffffff" stroke="#4caf50" stroke-width="2"/>
+  <text x="410" y="227" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">✅ Verified: You confirmed</text>
+
+  <!-- Why it matters box -->
+  <rect x="530" y="90" width="140" height="160" rx="8" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+  <text x="600" y="115" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#e65100">Why It Matters</text>
+
+  <text x="600" y="140" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#1a1a2e">When = outdated?</text>
+  <text x="600" y="160" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#1a1a2e">Where = which chat?</text>
+  <text x="600" y="180" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#1a1a2e">Confidence = trust?</text>
+  <text x="600" y="200" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#1a1a2e">Verified = true?</text>
+
+  <text x="600" y="230" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#666">Can debug errors!</text>
+</svg>
