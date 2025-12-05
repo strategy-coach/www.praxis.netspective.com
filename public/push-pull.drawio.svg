@@ -24,33 +24,33 @@
   <text x="120" y="75" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#2e7d32">Push (Always Ready)</text>
 
   <rect x="40" y="90" width="160" height="30" rx="6" fill="#ffffff" stroke="#66bb6a" stroke-width="1"/>
-  <text x="120" y="110" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">👤 Your name</text>
+  <text x="120" y="110" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Your name</text>
 
   <rect x="40" y="125" width="160" height="30" rx="6" fill="#ffffff" stroke="#66bb6a" stroke-width="1"/>
-  <text x="120" y="145" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">⚠️ Your allergies</text>
+  <text x="120" y="145" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Your allergies</text>
 
   <rect x="40" y="160" width="160" height="30" rx="6" fill="#ffffff" stroke="#66bb6a" stroke-width="1"/>
-  <text x="120" y="180" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">🌍 Your time zone</text>
+  <text x="120" y="180" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Your time zone</text>
 
   <rect x="40" y="195" width="160" height="30" rx="6" fill="#ffffff" stroke="#66bb6a" stroke-width="1"/>
-  <text x="120" y="215" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">📋 Current project</text>
+  <text x="120" y="215" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Current project</text>
 
   <!-- Pull Box -->
   <rect x="480" y="50" width="200" height="180" rx="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
   <text x="580" y="75" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#1565c0">Pull (Load When Needed)</text>
 
   <rect x="500" y="90" width="160" height="30" rx="6" fill="#ffffff" stroke="#42a5f5" stroke-width="1"/>
-  <text x="580" y="110" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">📜 Old conversations</text>
+  <text x="580" y="110" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Old conversations</text>
 
   <rect x="500" y="125" width="160" height="30" rx="6" fill="#ffffff" stroke="#42a5f5" stroke-width="1"/>
-  <text x="580" y="145" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">📁 Old project details</text>
+  <text x="580" y="145" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Old project details</text>
 
   <rect x="500" y="160" width="160" height="30" rx="6" fill="#ffffff" stroke="#42a5f5" stroke-width="1"/>
-  <text x="580" y="180" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">💬 Rarely used prefs</text>
+  <text x="580" y="180" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Rarely used prefs</text>
 
   <!-- AI Working Memory (Center) -->
   <rect x="260" y="80" width="180" height="100" rx="10" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
-  <text x="350" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#7b1fa2">🧠 AI's Working</text>
+  <text x="350" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#7b1fa2">AI's Working</text>
   <text x="350" y="125" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#7b1fa2">Memory</text>
   <text x="350" y="155" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#666">What AI has ready</text>
   <text x="350" y="170" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#666">right now</text>
@@ -63,7 +63,7 @@
 
   <!-- Your Question -->
   <rect x="260" y="200" width="180" height="40" rx="8" fill="#fff8e1" stroke="#ffa726" stroke-width="2"/>
-  <text x="350" y="225" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a2e">❓ Your Question</text>
+  <text x="350" y="225" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a2e">Your Question</text>
 
   <!-- Decision Diamond -->
   <path d="M 350 250 L 400 280 L 350 310 L 300 280 Z" fill="#ffecb3" stroke="#ffa726" stroke-width="2"/>

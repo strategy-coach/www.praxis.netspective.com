@@ -19,7 +19,7 @@
 
   <!-- Start talking -->
   <rect x="40" y="85" width="90" height="45" rx="8" fill="#ffffff" stroke="#66bb6a" stroke-width="2"/>
-  <text x="85" y="105" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">📞 Start</text>
+  <text x="85" y="105" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Start</text>
   <text x="85" y="118" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">talking</text>
 
   <!-- Arrow -->
@@ -27,7 +27,7 @@
 
   <!-- Have conversation -->
   <rect x="155" y="85" width="90" height="45" rx="8" fill="#ffffff" stroke="#66bb6a" stroke-width="2"/>
-  <text x="200" y="105" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">💬 Have</text>
+  <text x="200" y="105" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Have</text>
   <text x="200" y="118" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">conversation</text>
 
   <!-- Arrow -->
@@ -35,7 +35,7 @@
 
   <!-- Say goodbye -->
   <rect x="270" y="85" width="90" height="45" rx="8" fill="#ffffff" stroke="#66bb6a" stroke-width="2"/>
-  <text x="315" y="105" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">👋 Say</text>
+  <text x="315" y="105" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Say</text>
   <text x="315" y="118" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">goodbye</text>
 
   <!-- After Session Box -->
@@ -47,7 +47,7 @@
 
   <!-- Important notes saved -->
   <rect x="410" y="85" width="110" height="45" rx="8" fill="#ffffff" stroke="#42a5f5" stroke-width="2"/>
-  <text x="465" y="105" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">📝 Important</text>
+  <text x="465" y="105" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Important</text>
   <text x="465" y="118" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">notes saved</text>
 
   <!-- Arrow -->
@@ -55,12 +55,12 @@
 
   <!-- Goes to permanent file -->
   <rect x="545" y="85" width="120" height="45" rx="8" fill="#ffffff" stroke="#42a5f5" stroke-width="2"/>
-  <text x="605" y="105" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">🗄️ Goes to your</text>
+  <text x="605" y="105" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Goes to your</text>
   <text x="605" y="118" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">permanent file</text>
 
   <!-- Key insight box -->
   <rect x="20" y="170" width="660" height="90" rx="10" fill="#fff8e1" stroke="#ffa726" stroke-width="2"/>
-  <text x="350" y="195" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#e65100">✨ The Magic</text>
+  <text x="350" y="195" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#e65100">The Magic</text>
   <text x="350" y="220" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#1a1a2e">Sessions end, but what the AI learned about you stays forever.</text>
   <text x="350" y="245" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">One task = One session (recipes, vacation planning, debugging = separate sessions)</text>
 </svg>

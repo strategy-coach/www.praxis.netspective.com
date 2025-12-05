@@ -18,15 +18,15 @@
   <text x="170" y="80" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#c62828">Without Context Engineering</text>
 
   <rect x="40" y="95" width="260" height="30" rx="6" fill="#ffffff" stroke="#ef9a9a" stroke-width="1"/>
-  <text x="170" y="115" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">😔 AI forgets everything</text>
+  <text x="170" y="115" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">AI forgets everything</text>
 
   <rect x="40" y="130" width="260" height="30" rx="6" fill="#ffffff" stroke="#ef9a9a" stroke-width="1"/>
-  <text x="170" y="150" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">🔄 You repeat yourself constantly</text>
+  <text x="170" y="150" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">You repeat yourself constantly</text>
 
   <rect x="40" y="165" width="260" height="30" rx="6" fill="#ffffff" stroke="#ef9a9a" stroke-width="1"/>
-  <text x="170" y="185" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">📋 Generic, unhelpful responses</text>
+  <text x="170" y="185" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Generic, unhelpful responses</text>
 
-  <text x="170" y="215" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#c62828">😤 Frustrating experience</text>
+  <text x="170" y="215" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#c62828">Frustrating experience</text>
 
   <!-- Arrow -->
   <path d="M 330 137 L 370 137" stroke="#4caf50" stroke-width="3" fill="none" marker-end="url(#arrowhead11)"/>
@@ -38,15 +38,15 @@
   <text x="530" y="80" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2e7d32">With Context Engineering</text>
 
   <rect x="400" y="95" width="260" height="30" rx="6" fill="#ffffff" stroke="#66bb6a" stroke-width="1"/>
-  <text x="530" y="115" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">🧠 AI remembers you</text>
+  <text x="530" y="115" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">AI remembers you</text>
 
   <rect x="400" y="130" width="260" height="30" rx="6" fill="#ffffff" stroke="#66bb6a" stroke-width="1"/>
-  <text x="530" y="150" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">🎯 Personalized responses</text>
+  <text x="530" y="150" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Personalized responses</text>
 
   <rect x="400" y="165" width="260" height="30" rx="6" fill="#ffffff" stroke="#66bb6a" stroke-width="1"/>
-  <text x="530" y="185" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">📈 Gets smarter over time</text>
+  <text x="530" y="185" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Gets smarter over time</text>
 
-  <text x="530" y="215" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#2e7d32">✨ Magical experience</text>
+  <text x="530" y="215" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#2e7d32">Magical experience</text>
 
   <!-- Bottom summary -->
   <rect x="20" y="235" width="660" height="35" rx="8" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>

@@ -15,7 +15,7 @@
 
   <!-- User asks question -->
   <rect x="40" y="90" width="120" height="50" rx="8" fill="#ffffff" stroke="#42a5f5" stroke-width="2"/>
-  <text x="100" y="110" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">👤 You ask</text>
+  <text x="100" y="110" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">You ask</text>
   <text x="100" y="125" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">a question</text>
 
   <!-- Arrow -->
@@ -23,7 +23,7 @@
 
   <!-- AI gives answer -->
   <rect x="180" y="90" width="120" height="50" rx="8" fill="#c8e6c9" stroke="#43a047" stroke-width="2"/>
-  <text x="240" y="110" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">🤖 AI gives</text>
+  <text x="240" y="110" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">AI gives</text>
   <text x="240" y="125" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">smart answer</text>
 
   <!-- Behind the Scenes Section -->
@@ -41,17 +41,17 @@
   <!-- Three sources -->
   <!-- Memories -->
   <rect x="80" y="310" width="140" height="60" rx="8" fill="#e8f5e9" stroke="#66bb6a" stroke-width="2"/>
-  <text x="150" y="335" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">📁 Checks your</text>
+  <text x="150" y="335" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Checks your</text>
   <text x="150" y="352" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">memories</text>
 
   <!-- Knowledge -->
   <rect x="280" y="310" width="140" height="60" rx="8" fill="#e3f2fd" stroke="#42a5f5" stroke-width="2"/>
-  <text x="350" y="335" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">📚 Looks up general</text>
+  <text x="350" y="335" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Looks up general</text>
   <text x="350" y="352" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">knowledge</text>
 
   <!-- Real-time data -->
   <rect x="480" y="310" width="140" height="60" rx="8" fill="#fce4ec" stroke="#ec407a" stroke-width="2"/>
-  <text x="550" y="335" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">🔧 Gets real-time</text>
+  <text x="550" y="335" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Gets real-time</text>
   <text x="550" y="352" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">data</text>
 
   <!-- Arrows from AI figures out to sources -->
@@ -61,7 +61,7 @@
 
   <!-- Puts it together -->
   <rect x="280" y="400" width="140" height="50" rx="8" fill="#f3e5f5" stroke="#ab47bc" stroke-width="2"/>
-  <text x="350" y="420" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">🧠 Puts it all</text>
+  <text x="350" y="420" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Puts it all</text>
   <text x="350" y="437" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">together</text>
 
   <!-- Arrows from sources to puts together -->
@@ -74,7 +74,7 @@
 
   <!-- Learns something new -->
   <rect x="500" y="400" width="140" height="50" rx="8" fill="#fff8e1" stroke="#ffb300" stroke-width="2"/>
-  <text x="570" y="420" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">💾 Learns something</text>
+  <text x="570" y="420" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">Learns something</text>
   <text x="570" y="437" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a2e">new about you</text>
 
   <!-- Arrow from response to learns -->

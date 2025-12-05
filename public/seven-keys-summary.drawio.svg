@@ -18,31 +18,31 @@
 
   <!-- Key 1 -->
   <rect x="40" y="70" width="290" height="45" rx="8" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="185" y="98" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a2e">1️⃣ Sessions: One conversation at a time</text>
+  <text x="185" y="98" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a2e">1. Sessions: One conversation at a time</text>
 
   <!-- Key 2 -->
   <rect x="370" y="70" width="290" height="45" rx="8" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
-  <text x="515" y="98" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a2e">2️⃣ Memory: Your personal information</text>
+  <text x="515" y="98" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a2e">2. Memory: Your personal information</text>
 
   <!-- Key 3 -->
   <rect x="40" y="125" width="290" height="45" rx="8" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
-  <text x="185" y="153" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a2e">3️⃣ Auto-Learning: AI takes notes</text>
+  <text x="185" y="153" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a2e">3. Auto-Learning: AI takes notes</text>
 
   <!-- Key 4 -->
   <rect x="370" y="125" width="290" height="45" rx="8" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
-  <text x="515" y="153" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a2e">4️⃣ Provenance: Where info came from</text>
+  <text x="515" y="153" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a2e">4. Provenance: Where info came from</text>
 
   <!-- Key 5 -->
   <rect x="40" y="180" width="290" height="45" rx="8" fill="#fce4ec" stroke="#e91e63" stroke-width="2"/>
-  <text x="185" y="208" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a2e">5️⃣ Push/Pull: Smart loading of info</text>
+  <text x="185" y="208" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a2e">5. Push/Pull: Smart loading of info</text>
 
   <!-- Key 6 -->
   <rect x="370" y="180" width="290" height="45" rx="8" fill="#ffebee" stroke="#ef5350" stroke-width="2"/>
-  <text x="515" y="208" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a2e">6️⃣ Production: Privacy, speed, scale</text>
+  <text x="515" y="208" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a2e">6. Production: Privacy, speed, scale</text>
 
   <!-- Key 7 -->
   <rect x="205" y="235" width="290" height="45" rx="8" fill="#e0f7fa" stroke="#00bcd4" stroke-width="2"/>
-  <text x="350" y="263" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a2e">7️⃣ Orchestration: Everything together</text>
+  <text x="350" y="263" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a2e">7. Orchestration: Everything together</text>
 
   <!-- Arrows pointing to result -->
   <path d="M 185 115 L 240 350" stroke="#4caf50" stroke-width="1.5" fill="none"/>
@@ -55,5 +55,5 @@
 
   <!-- Result -->
   <rect x="150" y="355" width="400" height="50" rx="10" fill="#c8e6c9" stroke="#2e7d32" stroke-width="3"/>
-  <text x="350" y="385" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1b5e20">🎯 Result: AI that truly knows you</text>
+  <text x="350" y="385" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1b5e20">Result: AI that truly knows you</text>
 </svg>
