@@ -44,13 +44,7 @@
   <rect x="205" y="235" width="290" height="45" rx="8" fill="#e0f7fa" stroke="#00bcd4" stroke-width="2"/>
   <text x="350" y="263" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a2e">7. Orchestration: Everything together</text>
 
-  <!-- Arrows pointing to result -->
-  <path d="M 185 115 L 240 350" stroke="#4caf50" stroke-width="1.5" fill="none"/>
-  <path d="M 515 115 L 460 350" stroke="#4caf50" stroke-width="1.5" fill="none"/>
-  <path d="M 185 170 L 270 350" stroke="#4caf50" stroke-width="1.5" fill="none"/>
-  <path d="M 515 170 L 430 350" stroke="#4caf50" stroke-width="1.5" fill="none"/>
-  <path d="M 185 225 L 300 350" stroke="#4caf50" stroke-width="1.5" fill="none"/>
-  <path d="M 515 225 L 400 350" stroke="#4caf50" stroke-width="1.5" fill="none"/>
+  <!-- Arrow from Key 7 to result -->
   <path d="M 350 280 L 350 350" stroke="#4caf50" stroke-width="2" fill="none" marker-end="url(#arrowhead12)"/>
 
   <!-- Result -->

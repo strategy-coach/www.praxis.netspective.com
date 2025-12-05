@@ -73,12 +73,12 @@
   <!-- Arrow from question to decision -->
   <path d="M 350 240 L 350 250" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead5)"/>
 
-  <!-- Arrow from decision to Pull (Yes) -->
-  <path d="M 400 280 L 500 140" stroke="#1976d2" stroke-width="2" fill="none" marker-end="url(#arrowhead5b)"/>
-  <text x="470" y="200" font-family="Arial, sans-serif" font-size="10" fill="#1976d2">Yes</text>
+  <!-- Arrow from decision to Pull (Yes) - goes around to avoid overlap -->
+  <path d="M 400 280 L 460 280 L 460 200 L 500 200" stroke="#1976d2" stroke-width="2" fill="none" marker-end="url(#arrowhead5b)"/>
+  <text x="430" y="270" font-family="Arial, sans-serif" font-size="10" fill="#1976d2">Yes</text>
 
   <!-- Arrow from Pull back to Working Memory -->
-  <path d="M 480 140 L 440 130" stroke="#1976d2" stroke-width="2" stroke-dasharray="5,3" fill="none" marker-end="url(#arrowhead5b)"/>
+  <path d="M 480 130 L 440 130" stroke="#1976d2" stroke-width="2" stroke-dasharray="5,3" fill="none" marker-end="url(#arrowhead5b)"/>
 
   <!-- Summary Box -->
   <rect x="20" y="320" width="660" height="50" rx="8" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>

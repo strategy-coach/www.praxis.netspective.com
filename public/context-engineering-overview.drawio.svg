@@ -69,8 +69,8 @@
   <path d="M 350 370 L 350 400" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
   <path d="M 550 370 L 400 400" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
 
-  <!-- Arrow to response -->
-  <path d="M 350 450 L 350 470 L 600 470 L 600 130 L 310 130" stroke="#43a047" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <!-- Arrow to response - goes outside the main box to avoid overlap -->
+  <path d="M 350 450 L 350 490 L 690 490 L 690 130 L 310 130" stroke="#43a047" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
 
   <!-- Learns something new -->
   <rect x="500" y="400" width="140" height="50" rx="8" fill="#fff8e1" stroke="#ffb300" stroke-width="2"/>
