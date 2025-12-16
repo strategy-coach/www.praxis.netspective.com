@@ -2,6 +2,7 @@ import { RootProvider } from 'fumadocs-ui/provider/next';
 import './global.css';
 import { Geist, Geist_Mono } from 'next/font/google';
 import type { Metadata } from 'next';
+import { PHProvider } from '@/components/posthog-provider';
 
 const geist = Geist({
   subsets: ['latin'],
@@ -31,7 +32,9 @@ export default function Layout({ children }: LayoutProps<'/'>) {
   return (
     <html lang="en" className={`${geist.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
-        <RootProvider>{children}</RootProvider>
+        <PHProvider>
+          <RootProvider>{children}</RootProvider>
+        </PHProvider>
       </body>
     </html>
   );
