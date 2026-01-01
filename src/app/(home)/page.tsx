@@ -12,12 +12,14 @@ export default function HomePage() {
 
         <div className="max-w-4xl mx-auto space-y-8 relative z-10">
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent pb-2">
-            The Praxis
+            Netspective Unified Process
           </h1>
 
-
+          <h2>
+            An Agile Quality System & SDLC for Regulated IT Deliverables
+          </h2>
           <p className="text-xl md:text-2xl text-fd-muted-foreground max-w-2xl mx-auto">
-            A living manifesto for the AI age, focused on helping humans transition from the old world of work to the new
+            Regulated software requires more than just code—it demands documented, auditable processes that meet FDA, HIPAA, NIST, and other regulatory standards. NUP provides the complete framework your team needs, ready to integrate into your quality management system.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">

@@ -7,12 +7,12 @@ export function baseOptions(): BaseLayoutProps {
       title: (
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <Image
-            src="/icon.png"
-            alt="Praxis Logo"
-            width={24}
-            height={24}
+            src="/netspective-logo-dark.png"
+            alt="Netspective Logo"
+            width={139}
+            height={37}
           />
-          <span>Praxis</span>
+          {/* <span>Praxis</span> */}
         </div>
       ),
     },
