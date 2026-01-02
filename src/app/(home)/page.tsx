@@ -15,16 +15,16 @@ export default function HomePage() {
             Netspective Unified Process
           </h1>
 
-          <h2>
-            An Agile Quality System & SDLC for Regulated IT Deliverables
-          </h2>
           <p className="text-xl md:text-2xl text-fd-muted-foreground max-w-2xl mx-auto">
+            An Agile Quality System & SDLC for Regulated IT Deliverables
+          </p>
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto animate-slide-up">
             Regulated software requires more than just code—it demands documented, auditable processes that meet FDA, HIPAA, NIST, and other regulatory standards. NUP provides the complete framework your team needs, ready to integrate into your quality management system.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <Link
-              href="/docs/the-praxis"
+              href="/docs/netspective-unified-process"
               className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2"
             >
               Get Started

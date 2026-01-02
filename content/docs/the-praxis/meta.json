@@ -1,8 +1,0 @@
-{
-  "title": "The Praxis",
-  "description": "A living manifesto for the AI age",
-  "icon": "House",
-  "root": true,
-  "pages": ["index"]
-}
-

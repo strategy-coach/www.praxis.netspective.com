@@ -1,0 +1,8 @@
+{
+  "title": "Netspective Unified Process",
+  "description": "An Agile Quality System & SDLC for Regulated IT Deliverables",
+  "icon": "House",
+  "root": true,
+  "pages": ["index"]
+}
+
